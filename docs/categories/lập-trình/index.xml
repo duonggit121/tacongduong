@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Lập Trình on Tạ Công Dương</title>
+        <link>http://localhost:1313/categories/l%E1%BA%ADp-tr%C3%ACnh/</link>
+        <description>Recent content in Lập Trình on Tạ Công Dương</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>vi</language><atom:link href="http://localhost:1313/categories/l%E1%BA%ADp-tr%C3%ACnh/index.xml" rel="self" type="application/rss+xml" />
+    </channel>
+</rss>

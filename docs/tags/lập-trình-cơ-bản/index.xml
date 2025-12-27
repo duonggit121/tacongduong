@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Lập Trình Cơ Bản on Tạ Công Dương</title>
+        <link>http://localhost:1313/tags/l%E1%BA%ADp-tr%C3%ACnh-c%C6%A1-b%E1%BA%A3n/</link>
+        <description>Recent content in Lập Trình Cơ Bản on Tạ Công Dương</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>vi</language>
+        <lastBuildDate>Wed, 01 Jan 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/l%E1%BA%ADp-tr%C3%ACnh-c%C6%A1-b%E1%BA%A3n/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Java là gì? Vì sao Java vẫn được dùng rộng rãi đến ngày nay</title>
+        <link>http://localhost:1313/blog/bai1/</link>
+        <pubDate>Wed, 01 Jan 2025 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/blog/bai1/</guid>
+        <description>&lt;h2 id=&#34;java-là-gì&#34;&gt;Java là gì?
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Java&lt;/strong&gt; là một ngôn ngữ lập trình hướng đối tượng, được phát triển bởi &lt;strong&gt;Sun Microsystems&lt;/strong&gt; (nay thuộc Oracle) và ra mắt lần đầu vào năm &lt;strong&gt;1995&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Java được thiết kế với triết lý nổi tiếng:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Write once, run anywhere&lt;/strong&gt;&lt;br&gt;
+&lt;em&gt;(Viết một lần, chạy ở mọi nơi)&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Điều này có nghĩa là chương trình Java có thể chạy trên nhiều hệ điều hành khác nhau mà không cần chỉnh sửa mã nguồn.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;java-hoạt-động-như-thế-nào&#34;&gt;Java hoạt động như thế nào?
+&lt;/h2&gt;&lt;p&gt;Quy trình hoạt động của Java gồm các bước:&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

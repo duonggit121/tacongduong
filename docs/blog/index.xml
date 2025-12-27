@@ -1,0 +1,1155 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Blogs on Tạ Công Dương</title>
+        <link>http://localhost:1313/blog/</link>
+        <description>Recent content in Blogs on Tạ Công Dương</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>vi</language>
+        <lastBuildDate>Thu, 09 Jan 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/blog/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>JavaScript là gì? Cách chạy JavaScript đơn giản cho người mới</title>
+        <link>http://localhost:1313/blog/bai9/</link>
+        <pubDate>Thu, 09 Jan 2025 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/blog/bai9/</guid>
+        <description>&lt;h2 id=&#34;giới-thiệu&#34;&gt;Giới thiệu
+&lt;/h2&gt;&lt;p&gt;Nếu Java phổ biến ở backend và Android, thì &lt;strong&gt;JavaScript&lt;/strong&gt; lại là “linh hồn của web hiện đại”.&lt;/p&gt;
+&lt;p&gt;Bạn nhìn thấy:&lt;/p&gt;
+&lt;p&gt;✔ Nút bấm động&lt;br&gt;
+✔ Popup&lt;br&gt;
+✔ Hiệu ứng trang web&lt;br&gt;
+✔ Ứng dụng web như Gmail, Facebook&lt;/p&gt;
+&lt;p&gt;👉 Rất nhiều trong đó chạy bằng &lt;strong&gt;JavaScript (JS)&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Trong bài này, bạn sẽ hiểu &lt;strong&gt;JavaScript là gì và chạy như thế nào — thật đơn giản&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;javascript-là-gì&#34;&gt;JavaScript là gì?
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;JavaScript là ngôn ngữ lập trình dùng để tạo các tính năng động trên website.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;JavaScript có thể chạy ở:&lt;/p&gt;
+&lt;p&gt;✔ Trình duyệt (Chrome, Edge, Firefox…)&lt;br&gt;
+✔ Backend (runtime Node.js)&lt;/p&gt;
+&lt;p&gt;📌 Lưu ý quan trọng:&lt;/p&gt;
+&lt;p&gt;❌ JavaScript &lt;strong&gt;không phải&lt;/strong&gt; Java&lt;br&gt;
+✔ Chúng là hai ngôn ngữ khác nhau hoàn toàn&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;javascript-chạy-ở-đâu&#34;&gt;JavaScript chạy ở đâu?
+&lt;/h2&gt;&lt;p&gt;Trình duyệt web đã tích hợp sẵn &lt;strong&gt;JavaScript Engine&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Ví dụ:&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Trình duyệt&lt;/th&gt;
+          &lt;th&gt;Engine&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Chrome&lt;/td&gt;
+          &lt;td&gt;V8&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Firefox&lt;/td&gt;
+          &lt;td&gt;SpiderMonkey&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Safari&lt;/td&gt;
+          &lt;td&gt;JavaScriptCore&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;👉 Vì vậy bạn &lt;strong&gt;không cần cài thêm gì để chạy JS trên trình duyệt&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;chạy-javascript-trực-tiếp-trên-trình-duyệt&#34;&gt;Chạy JavaScript trực tiếp trên trình duyệt
+&lt;/h2&gt;&lt;h3 id=&#34;-cách-1--mở-console&#34;&gt;🔹 Cách 1 — Mở Console
+&lt;/h3&gt;&lt;p&gt;1️⃣ Mở trang web&lt;br&gt;
+2️⃣ Nhấn:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;F12&lt;/strong&gt; hoặc&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Ctrl + Shift + I&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;3️⃣ Chọn tab &lt;strong&gt;Console&lt;/strong&gt;&lt;br&gt;
+4️⃣ Gõ:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;console&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;log&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Xin chào JavaScript!&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Kết quả xuất hiện ngay 👇&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;chạy-javascript-trong-file-html&#34;&gt;Chạy JavaScript trong file HTML
+&lt;/h2&gt;&lt;p&gt;Tạo file &lt;code&gt;index.html&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;html&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;head&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;title&lt;/span&gt;&amp;gt;Demo JS&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;title&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;head&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;body&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;h1&lt;/span&gt;&amp;gt;Xin chào!&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;h1&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;script&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;console&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;log&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;JavaScript đang chạy!&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;script&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;body&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;html&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;👉 Mở file bằng trình duyệt để chạy&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;cú-pháp-cơ-bản-javascript&#34;&gt;Cú pháp cơ bản JavaScript
+&lt;/h2&gt;&lt;h3 id=&#34;-khai-báo-biến&#34;&gt;🔹 Khai báo biến
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;name&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;An&amp;#34;&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;const&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;age&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;20&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;var&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;city&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Hanoi&amp;#34;&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;📌 Khuyến nghị:&lt;/p&gt;
+&lt;p&gt;✔ Dùng &lt;code&gt;let&lt;/code&gt; và &lt;code&gt;const&lt;/code&gt;&lt;br&gt;
+❌ Hạn chế &lt;code&gt;var&lt;/code&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-in-ra-màn-hình-console&#34;&gt;🔹 In ra màn hình console
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;console&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;log&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Hello JS&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h3 id=&#34;-hàm-đơn-giản&#34;&gt;🔹 Hàm đơn giản
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;function&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;sayHello&lt;/span&gt;() {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;console&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;log&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Xin chào!&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;sayHello&lt;/span&gt;();
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id=&#34;java-vs-javascript--khác-nhau-không&#34;&gt;Java vs JavaScript — khác nhau không?
+&lt;/h2&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Tiêu chí&lt;/th&gt;
+          &lt;th&gt;Java&lt;/th&gt;
+          &lt;th&gt;JavaScript&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Loại ngôn ngữ&lt;/td&gt;
+          &lt;td&gt;Biên dịch &amp;amp; chạy trên JVM&lt;/td&gt;
+          &lt;td&gt;Thông dịch (runtime JS)&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Dùng cho&lt;/td&gt;
+          &lt;td&gt;Backend, Android, doanh nghiệp&lt;/td&gt;
+          &lt;td&gt;Web &amp;amp; ứng dụng web&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Kiểu dữ liệu&lt;/td&gt;
+          &lt;td&gt;Chặt chẽ&lt;/td&gt;
+          &lt;td&gt;Linh hoạt&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Cú pháp&lt;/td&gt;
+          &lt;td&gt;Nghiêm ngặt&lt;/td&gt;
+          &lt;td&gt;Dễ viết hơn&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;👉 &lt;strong&gt;Tên giống nhau nhưng bản chất khác nhau hoàn toàn&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;tổng-kết-nhanh&#34;&gt;Tổng kết nhanh
+&lt;/h2&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Nội dung&lt;/th&gt;
+          &lt;th&gt;Ghi nhớ&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;JavaScript là gì?&lt;/td&gt;
+          &lt;td&gt;Ngôn ngữ lập trình web động&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Chạy ở đâu?&lt;/td&gt;
+          &lt;td&gt;Trình duyệt &amp;amp; Node.js&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Console&lt;/td&gt;
+          &lt;td&gt;Dùng &lt;code&gt;console.log()&lt;/code&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Mục đích&lt;/td&gt;
+          &lt;td&gt;Tạo tương tác trên web&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;kết-luận&#34;&gt;Kết luận
+&lt;/h2&gt;&lt;p&gt;JavaScript là nền tảng của web hiện đại.&lt;br&gt;
+Nếu bạn muốn:&lt;/p&gt;
+&lt;p&gt;✔ Làm website&lt;br&gt;
+✔ Làm frontend&lt;br&gt;
+✔ Làm full-stack&lt;/p&gt;
+&lt;p&gt;👉 Thì JavaScript &lt;strong&gt;là kỹ năng bắt buộc phải biết&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Ở các bài tiếp theo, chúng ta sẽ cùng tìm hiểu:&lt;/p&gt;
+&lt;p&gt;🔹 Biến&lt;br&gt;
+🔹 Hàm&lt;br&gt;
+🔹 Cấu trúc điều kiện&lt;br&gt;
+🔹 DOM&lt;br&gt;
+🔹 ES6&lt;/p&gt;
+&lt;p&gt;…theo cách &lt;strong&gt;dễ hiểu — học tới đâu nắm chắc tới đó&lt;/strong&gt; 🚀&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Mảng (Array) trong Java — Hiểu là dùng được ngay</title>
+        <link>http://localhost:1313/blog/bai8/</link>
+        <pubDate>Wed, 08 Jan 2025 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/blog/bai8/</guid>
+        <description>&lt;h2 id=&#34;giới-thiệu&#34;&gt;Giới thiệu
+&lt;/h2&gt;&lt;p&gt;Trong lập trình, đôi khi bạn cần lưu &lt;strong&gt;nhiều giá trị cùng loại&lt;/strong&gt;&lt;br&gt;
+Ví dụ:&lt;/p&gt;
+&lt;p&gt;✔ danh sách điểm&lt;br&gt;
+✔ danh sách tên sinh viên&lt;br&gt;
+✔ danh sách số điện thoại&lt;/p&gt;
+&lt;p&gt;Nếu dùng biến riêng lẻ:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; a &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; 5;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; b &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; 7;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; c &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; 9;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;👉 Rất bất tiện!&lt;/p&gt;
+&lt;p&gt;Vì vậy Java cung cấp &lt;strong&gt;Array (Mảng)&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;mảng-là-gì&#34;&gt;Mảng là gì?
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Mảng là một tập hợp nhiều phần tử có cùng kiểu dữ liệu.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Ví dụ:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;[]&lt;/span&gt; numbers &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; {1, 2, 3, 4, 5};
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Ở đây:&lt;/p&gt;
+&lt;p&gt;✔ &lt;code&gt;int&lt;/code&gt; → kiểu dữ liệu&lt;br&gt;
+✔ &lt;code&gt;[]&lt;/code&gt; → đánh dấu mảng&lt;br&gt;
+✔ &lt;code&gt;{1,2,3,4,5}&lt;/code&gt; → danh sách giá trị&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;khai-báo-mảng-trong-java&#34;&gt;Khai báo mảng trong Java
+&lt;/h2&gt;&lt;p&gt;Có 2 cách phổ biến:&lt;/p&gt;
+&lt;h3 id=&#34;-cách-1--khai-báo--gán-giá-trị-luôn&#34;&gt;🔹 Cách 1 — Khai báo &amp;amp; gán giá trị luôn
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;String&lt;span style=&#34;color:#f92672&#34;&gt;[]&lt;/span&gt; names &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; {&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;An&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Bình&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Chi&amp;#34;&lt;/span&gt;};
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;-cách-2--khai-báo-trước-gán-sau&#34;&gt;🔹 Cách 2 — Khai báo trước, gán sau
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;[]&lt;/span&gt; a &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;3&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;a&lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;0&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; 10;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;a&lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;1&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; 20;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;a&lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;2&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; 30;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;👉 &lt;code&gt;new int[3]&lt;/code&gt; nghĩa là mảng có &lt;strong&gt;3 phần tử&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;truy-cập-phần-tử-mảng&#34;&gt;Truy cập phần tử mảng
+&lt;/h2&gt;&lt;p&gt;Chỉ số (index) trong Java:&lt;/p&gt;
+&lt;p&gt;🟣 Bắt đầu từ &lt;strong&gt;0&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Ví dụ:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;[]&lt;/span&gt; nums &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; {5, 10, 15};
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;System.&lt;span style=&#34;color:#a6e22e&#34;&gt;out&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;println&lt;/span&gt;(nums&lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;0&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;); &lt;span style=&#34;color:#75715e&#34;&gt;// 5&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;System.&lt;span style=&#34;color:#a6e22e&#34;&gt;out&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;println&lt;/span&gt;(nums&lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;1&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;); &lt;span style=&#34;color:#75715e&#34;&gt;// 10&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;System.&lt;span style=&#34;color:#a6e22e&#34;&gt;out&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;println&lt;/span&gt;(nums&lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;2&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;); &lt;span style=&#34;color:#75715e&#34;&gt;// 15&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;❌ Nếu truy cập sai index:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;nums&lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;3&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;👉 Sẽ bị lỗi &lt;strong&gt;ArrayIndexOutOfBoundsException&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;duyệt-mảng-bằng-vòng-lặp&#34;&gt;Duyệt mảng bằng vòng lặp
+&lt;/h2&gt;&lt;h3 id=&#34;-for-thường&#34;&gt;🔹 for thường
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;[]&lt;/span&gt; a &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; {1, 2, 3};
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; (&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; i &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; 0; i &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt; a.&lt;span style=&#34;color:#a6e22e&#34;&gt;length&lt;/span&gt;; i&lt;span style=&#34;color:#f92672&#34;&gt;++&lt;/span&gt;) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    System.&lt;span style=&#34;color:#a6e22e&#34;&gt;out&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;println&lt;/span&gt;(a&lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;i&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;-foreach-ngắn-gọn-hơn&#34;&gt;🔹 for–each (ngắn gọn hơn)
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; (&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; value : a) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    System.&lt;span style=&#34;color:#a6e22e&#34;&gt;out&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;println&lt;/span&gt;(value);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id=&#34;độ-dài-mảng&#34;&gt;Độ dài mảng
+&lt;/h2&gt;&lt;p&gt;Dùng thuộc tính:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;a.&lt;span style=&#34;color:#a6e22e&#34;&gt;length&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Ví dụ:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;System.&lt;span style=&#34;color:#a6e22e&#34;&gt;out&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;println&lt;/span&gt;(a.&lt;span style=&#34;color:#a6e22e&#34;&gt;length&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id=&#34;mảng-chỉ-có-kích-thước-cố-định&#34;&gt;Mảng chỉ có kích thước cố định
+&lt;/h2&gt;&lt;p&gt;Sau khi tạo:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;[]&lt;/span&gt; arr &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;5&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;👉 bạn &lt;strong&gt;không thể tăng/giảm số phần tử&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Nếu cần linh hoạt → dùng:&lt;/p&gt;
+&lt;p&gt;✔ &lt;code&gt;ArrayList&lt;/code&gt; (sẽ học ở phần sau)&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;tổng-kết-nhanh&#34;&gt;Tổng kết nhanh
+&lt;/h2&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Khái niệm&lt;/th&gt;
+          &lt;th&gt;Ý nghĩa&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Mảng&lt;/td&gt;
+          &lt;td&gt;Chứa nhiều giá trị cùng kiểu&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Index&lt;/td&gt;
+          &lt;td&gt;Bắt đầu từ 0&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;length&lt;/td&gt;
+          &lt;td&gt;Độ dài mảng&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Kích thước&lt;/td&gt;
+          &lt;td&gt;Cố định sau khi tạo&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;kết-luận&#34;&gt;Kết luận
+&lt;/h2&gt;&lt;p&gt;Mảng là nền tảng quan trọng trong Java giúp bạn:&lt;/p&gt;
+&lt;p&gt;✔ Lưu trữ dữ liệu nhiều phần tử&lt;br&gt;
+✔ Duyệt dữ liệu bằng vòng lặp&lt;br&gt;
+✔ Xử lý danh sách hiệu quả&lt;/p&gt;
+&lt;p&gt;👉 Hiểu vững mảng = Bạn đã tiến thêm 1 bước lớn trong Java 🚀&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Mảng (Array) trong Java — Hiểu nhanh cho người mới</title>
+        <link>http://localhost:1313/blog/bai7/</link>
+        <pubDate>Tue, 07 Jan 2025 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/blog/bai7/</guid>
+        <description>&lt;h2 id=&#34;giới-thiệu&#34;&gt;Giới thiệu
+&lt;/h2&gt;&lt;p&gt;Khi lập trình, nhiều lúc bạn cần lưu &lt;strong&gt;nhiều giá trị cùng loại&lt;/strong&gt; — ví dụ danh sách điểm, danh sách tuổi, danh sách sinh viên…&lt;/p&gt;
+&lt;p&gt;Nếu dùng từng biến riêng lẻ thì sẽ rất rối:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;int a = 5;
+int b = 7;
+int c = 9;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;👉 Lúc này &lt;strong&gt;mảng (Array)&lt;/strong&gt; ra đời để giúp bạn lưu trữ dữ liệu một cách gọn gàng.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;mảng-trong-java-là-gì&#34;&gt;Mảng trong Java là gì?
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Mảng là một tập hợp các phần tử cùng kiểu dữ liệu, được lưu liên tiếp trong bộ nhớ.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Ví dụ mảng số nguyên:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;int[] numbers = {1, 2, 3, 4, 5};
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Trong đó:&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Thành phần&lt;/th&gt;
+          &lt;th&gt;Ý nghĩa&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;int&lt;/td&gt;
+          &lt;td&gt;kiểu dữ liệu&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;[]&lt;/td&gt;
+          &lt;td&gt;khai báo mảng&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;numbers&lt;/td&gt;
+          &lt;td&gt;tên mảng&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;{1,2,3,4,5}&lt;/td&gt;
+          &lt;td&gt;giá trị trong mảng&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;📌 Lưu ý:&lt;br&gt;
+👉 Các phần tử trong mảng &lt;strong&gt;được đánh số từ 0&lt;/strong&gt;&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Vị trí (index)&lt;/th&gt;
+          &lt;th&gt;Giá trị&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;0&lt;/td&gt;
+          &lt;td&gt;1&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;1&lt;/td&gt;
+          &lt;td&gt;2&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;2&lt;/td&gt;
+          &lt;td&gt;3&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;3&lt;/td&gt;
+          &lt;td&gt;4&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;4&lt;/td&gt;
+          &lt;td&gt;5&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;khai-báo-mảng-trong-java&#34;&gt;Khai báo mảng trong Java
+&lt;/h2&gt;&lt;p&gt;Có 2 cách phổ biến:&lt;/p&gt;
+&lt;h3 id=&#34;-cách-1--khai-báo--gán-luôn-giá-trị&#34;&gt;🟢 Cách 1 — Khai báo &amp;amp; gán luôn giá trị
+&lt;/h3&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;int[] numbers = {10, 20, 30};
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;-cách-2--khai-báo-trước-gán-sau&#34;&gt;🟣 Cách 2 — Khai báo trước, gán sau
+&lt;/h3&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;int[] numbers = new int[3];
+numbers[0] = 10;
+numbers[1] = 20;
+numbers[2] = 30;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;👉 &lt;code&gt;new int[3]&lt;/code&gt; nghĩa là mảng có &lt;strong&gt;3 phần tử&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;truy-cập-phần-tử-trong-mảng&#34;&gt;Truy cập phần tử trong mảng
+&lt;/h2&gt;&lt;p&gt;Bạn dùng &lt;strong&gt;index (chỉ số)&lt;/strong&gt;:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;System.out.println(numbers[0]); // in phần tử đầu
+System.out.println(numbers[2]); // in phần tử thứ 3
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;⚠️ Nếu truy cập sai index:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;numbers[10];
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Java sẽ báo lỗi &lt;strong&gt;ArrayIndexOutOfBoundsException&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;duyệt-mảng-bằng-vòng-lặp&#34;&gt;Duyệt mảng bằng vòng lặp
+&lt;/h2&gt;&lt;h3 id=&#34;-for&#34;&gt;🔁 for
+&lt;/h3&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;for (int i = 0; i &amp;lt; numbers.length; i++) {
+System.out.println(numbers[i]);
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;📌 &lt;code&gt;numbers.length&lt;/code&gt; = số phần tử mảng&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-foreach-cách-viết-gọn-hơn&#34;&gt;🔁 for–each (cách viết gọn hơn)
+&lt;/h3&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;for (int n : numbers) {
+System.out.println(n);
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;👉 Cách này dễ đọc — rất hay dùng!&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;mảng-string&#34;&gt;Mảng String
+&lt;/h2&gt;&lt;p&gt;Không chỉ số nhé 😄&lt;br&gt;
+Bạn có thể tạo mảng chuỗi:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;String[] names = {&amp;#34;An&amp;#34;, &amp;#34;Bình&amp;#34;, &amp;#34;Lan&amp;#34;};
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Duyệt:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;for (String name : names) {
+System.out.println(name);
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
+&lt;h2 id=&#34;khi-nào-nên-dùng-mảng&#34;&gt;Khi nào nên dùng mảng?
+&lt;/h2&gt;&lt;p&gt;✔ Khi số phần tử &lt;strong&gt;biết trước&lt;/strong&gt;&lt;br&gt;
+✔ Khi các phần tử &lt;strong&gt;cùng kiểu dữ liệu&lt;/strong&gt;&lt;br&gt;
+✔ Khi cần lưu trữ cố định&lt;/p&gt;
+&lt;p&gt;Ví dụ phù hợp:&lt;/p&gt;
+&lt;p&gt;🟢 Danh sách điểm của 1 lớp&lt;br&gt;
+🟢 Danh sách số nguyên tử trong bảng tuần hoàn&lt;br&gt;
+🟢 Danh sách ngày trong tuần&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;hạn-chế-của-mảng&#34;&gt;Hạn chế của mảng
+&lt;/h2&gt;&lt;p&gt;❌ Kích thước &lt;strong&gt;không thay đổi được sau khi tạo&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Muốn linh hoạt hơn → sau này bạn sẽ học:&lt;/p&gt;
+&lt;p&gt;✔ &lt;code&gt;ArrayList&lt;/code&gt;&lt;br&gt;
+✔ &lt;code&gt;List&lt;/code&gt;&lt;br&gt;
+✔ &lt;code&gt;Map&lt;/code&gt;&lt;br&gt;
+✔ &lt;code&gt;Set&lt;/code&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;kết-luận&#34;&gt;Kết luận
+&lt;/h2&gt;&lt;p&gt;Trong bài này bạn đã hiểu:&lt;/p&gt;
+&lt;p&gt;✔ Mảng là gì&lt;/p&gt;
+&lt;p&gt;✔ Cách khai báo &amp;amp; truy cập phần tử&lt;/p&gt;
+&lt;p&gt;✔ Duyệt mảng bằng for &amp;amp; for–each&lt;/p&gt;
+&lt;p&gt;✔ Mảng nhiều chiều&lt;/p&gt;
+&lt;p&gt;✔ Khi nào nên dùng mảng&lt;/p&gt;
+&lt;p&gt;👉 Đây là bước quan trọng trước khi qua &lt;strong&gt;Collection &amp;amp; OOP nâng cao&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+</description>
+        </item>
+        <item>
+        <title>Vòng lặp trong Java — for, while, do-while giải thích dễ hiểu</title>
+        <link>http://localhost:1313/blog/bai6/</link>
+        <pubDate>Mon, 06 Jan 2025 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/blog/bai6/</guid>
+        <description>&lt;h2 id=&#34;giới-thiệu&#34;&gt;Giới thiệu
+&lt;/h2&gt;&lt;p&gt;Trong lập trình, sẽ có lúc bạn cần &lt;strong&gt;lặp đi lặp lại một công việc&lt;/strong&gt; — ví dụ:&lt;/p&gt;
+&lt;p&gt;✔ In 10 lần câu “Xin chào”&lt;br&gt;
+✔ Duyệt danh sách học sinh&lt;br&gt;
+✔ Tính tổng từ 1 → 100&lt;/p&gt;
+&lt;p&gt;Nếu không dùng vòng lặp, bạn sẽ phải viết code lặp lại rất dài và xấu 😅&lt;br&gt;
+Vì vậy, Java cung cấp 3 loại vòng lặp chính:&lt;/p&gt;
+&lt;p&gt;👉 &lt;code&gt;for&lt;/code&gt;&lt;br&gt;
+👉 &lt;code&gt;while&lt;/code&gt;&lt;br&gt;
+👉 &lt;code&gt;do…while&lt;/code&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;vòng-lặp-for&#34;&gt;Vòng lặp for
+&lt;/h2&gt;&lt;p&gt;Dùng khi &lt;strong&gt;biết trước số lần lặp&lt;/strong&gt;.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; (&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; i &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; 1; i &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;=&lt;/span&gt; 5; i&lt;span style=&#34;color:#f92672&#34;&gt;++&lt;/span&gt;) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    System.&lt;span style=&#34;color:#a6e22e&#34;&gt;out&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;println&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Lần thứ: &amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; i);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;🔍 Giải thích:&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Phần&lt;/th&gt;
+          &lt;th&gt;Ý nghĩa&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;int i = 1&lt;/td&gt;
+          &lt;td&gt;Giá trị bắt đầu&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;i &amp;lt;= 5&lt;/td&gt;
+          &lt;td&gt;Điều kiện tiếp tục lặp&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;i++&lt;/td&gt;
+          &lt;td&gt;Mỗi lần tăng 1&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;👉 Kết quả:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Lần thứ: 1
+Lần thứ: 2
+Lần thứ: 3
+Lần thứ: 4
+Lần thứ: 5
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;vòng-lặp-while&#34;&gt;Vòng lặp while
+&lt;/h2&gt;&lt;p&gt;Dùng khi chưa biết trước số lần lặp, chỉ biết điều kiện tiếp tục.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;int i = 1;
+
+while (i &amp;lt;= 5) {
+    System.out.println(i);
+    i++;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;⚠️ Nếu quên tăng i++ → vòng lặp vô hạn 😨&lt;/p&gt;
+&lt;h2 id=&#34;vòng-lặp-do--while&#34;&gt;Vòng lặp do — while
+&lt;/h2&gt;&lt;p&gt;Khác biệt lớn nhất:
+👉 Luôn chạy ít nhất 1 lần, dù điều kiện sai.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;int x = 10;
+
+do {
+    System.out.println(&amp;#34;Xin chào&amp;#34;);
+    x++;
+} while (x &amp;lt; 5);
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;👉 Dù x &amp;lt; 5 sai, chương trình vẫn in 1 lần.&lt;/p&gt;
+&lt;p&gt;So sánh nhanh&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Loại vòng lặp&lt;/th&gt;
+          &lt;th&gt;Dùng khi nào?&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;for&lt;/td&gt;
+          &lt;td&gt;Biết trước số lần lặp&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;while&lt;/td&gt;
+          &lt;td&gt;Lặp theo điều kiện chưa biết trước&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;do–while&lt;/td&gt;
+          &lt;td&gt;Muốn chạy ít nhất 1 lần&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;break-và-continue-trong-vòng-lặp&#34;&gt;break và continue trong vòng lặp
+&lt;/h2&gt;&lt;p&gt;🔴 break — dừng hẳn vòng lặp&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;for (int i = 1; i &amp;lt;= 5; i++) {
+    if (i == 3) break;
+    System.out.println(i);
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;👉 Chỉ in: 1 2&lt;/p&gt;
+&lt;p&gt;🟡 continue — bỏ qua lần lặp hiện tại&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;for (int i = 1; i &amp;lt;= 5; i++) {
+    if (i == 3) continue;
+    System.out.println(i);
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;👉 In: 1 2 4 5&lt;/p&gt;
+&lt;p&gt;Ví dụ thực tế — tính tổng từ 1 đến 10&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;int sum = 0;
+
+for (int i = 1; i &amp;lt;= 10; i++) {
+    sum += i;
+}
+
+System.out.println(&amp;#34;Tổng = &amp;#34; + sum);
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;👉 Kết quả: Tổng = 55&lt;/p&gt;
+&lt;h2 id=&#34;kết-luận&#34;&gt;Kết luận
+&lt;/h2&gt;&lt;p&gt;Qua bài này bạn đã hiểu:&lt;/p&gt;
+&lt;p&gt;✔ 3 loại vòng lặp trong Java&lt;/p&gt;
+&lt;p&gt;✔ Khi nào dùng for, while, do-while&lt;/p&gt;
+&lt;p&gt;✔ Cách dùng break &amp;amp; continue&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Câu điều kiện if–else &amp; switch trong Java — Hiểu là dùng được ngay</title>
+        <link>http://localhost:1313/blog/bai5/</link>
+        <pubDate>Sun, 05 Jan 2025 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/blog/bai5/</guid>
+        <description>&lt;h2 id=&#34;giới-thiệu&#34;&gt;Giới thiệu
+&lt;/h2&gt;&lt;p&gt;Trong lập trình, rất nhiều khi bạn cần:&lt;/p&gt;
+&lt;p&gt;✔ kiểm tra điều kiện&lt;br&gt;
+✔ phân nhánh xử lý&lt;br&gt;
+✔ chạy đoạn code khác nhau tuỳ tình huống&lt;/p&gt;
+&lt;p&gt;Khi đó, bạn sẽ dùng &lt;strong&gt;if — else — switch&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Bài này sẽ giúp bạn hiểu và dùng được &lt;strong&gt;câu điều kiện trong Java&lt;/strong&gt; một cách đơn giản nhất.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;if--else-là-gì&#34;&gt;if — else là gì?
+&lt;/h2&gt;&lt;p&gt;&lt;code&gt;if&lt;/code&gt; dùng để &lt;strong&gt;kiểm tra điều kiện&lt;/strong&gt;.&lt;br&gt;
+Nếu điều kiện đúng → chạy đoạn code bên trong.&lt;/p&gt;
+&lt;p&gt;Ví dụ:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; age &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; 18;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; (age &lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;=&lt;/span&gt; 18) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    System.&lt;span style=&#34;color:#a6e22e&#34;&gt;out&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;println&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Bạn đã đủ 18 tuổi&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Nếu điều kiện sai → Java bỏ qua.&lt;/p&gt;
+&lt;h2 id=&#34;if--else&#34;&gt;if — else
+&lt;/h2&gt;&lt;p&gt;Khi bạn muốn xử lý thêm trường hợp ngược lại, dùng else&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;int age = 16;
+
+if (age &amp;gt;= 18) {
+    System.out.println(&amp;#34;Đủ tuổi&amp;#34;);
+} else {
+    System.out.println(&amp;#34;Chưa đủ tuổi&amp;#34;);
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;🟢 Output:
+Chưa đủ tuổi&lt;/p&gt;
+&lt;h2 id=&#34;if--else-if--else&#34;&gt;if — else if — else
+&lt;/h2&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Dùng khi có nhiều điều kiện.
+int score = 85;
+
+if (score &amp;gt;= 90) {
+    System.out.println(&amp;#34;Xuất sắc&amp;#34;);
+} else if (score &amp;gt;= 75) {
+    System.out.println(&amp;#34;Khá&amp;#34;);
+} else if (score &amp;gt;= 50) {
+    System.out.println(&amp;#34;Trung bình&amp;#34;);
+} else {
+    System.out.println(&amp;#34;Yếu&amp;#34;);
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;👉 Java sẽ kiểm tra từ trên xuống.
+Gặp điều kiện đúng → dừng lạ&lt;/p&gt;
+&lt;h2 id=&#34;lưu-ý-quan-trọng&#34;&gt;Lưu ý quan trọng
+&lt;/h2&gt;&lt;p&gt;✔ Điều kiện trong if phải là boolean&lt;/p&gt;
+&lt;p&gt;✔ Dùng == để so sánh — đừng nhầm với =&lt;/p&gt;
+&lt;p&gt;Ví dụ đúng:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;if (a == 5) { }
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Ví dụ sai:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;if (a = 5) { }   // lỗi!
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;toán-tử-logic-đi-kèm-if&#34;&gt;Toán tử logic đi kèm if
+&lt;/h2&gt;&lt;p&gt;Toán tử	Ý nghĩa
+&amp;amp;&amp;amp;	Và (cả 2 đều đúng)&lt;/p&gt;
+&lt;p&gt;! Phủ định&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;int age = 20;
+boolean isStudent = true;
+
+if (age &amp;lt; 25 &amp;amp;&amp;amp; isStudent) {
+    System.out.println(&amp;#34;Giảm giá sinh viên&amp;#34;);
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;switch--khi-có-nhiều-lựa-chọn-cố-định&#34;&gt;switch — khi có nhiều lựa chọn cố định
+&lt;/h2&gt;&lt;p&gt;switch phù hợp khi bạn có các giá trị cụ thể như số, ký tự, chuỗi.&lt;/p&gt;
+&lt;p&gt;Ví dụ:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;int day = 3;
+
+switch (day) {
+    case 1:
+        System.out.println(&amp;#34;Thứ hai&amp;#34;);
+        break;
+    case 2:
+        System.out.println(&amp;#34;Thứ ba&amp;#34;);
+        break;
+    case 3:
+        System.out.println(&amp;#34;Thứ tư&amp;#34;);
+        break;
+    default:
+        System.out.println(&amp;#34;Ngày không hợp lệ&amp;#34;);
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;🟢 Output:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Thứ tư
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;vì-sao-cần-break&#34;&gt;Vì sao cần break?
+&lt;/h2&gt;&lt;p&gt;✔ break giúp thoát khỏi switch
+Nếu quên break, chương trình sẽ chạy tiếp các case phía dưới.&lt;/p&gt;
+&lt;h2 id=&#34;switch-với-string&#34;&gt;switch với String
+&lt;/h2&gt;&lt;p&gt;Java cho phép dùng String trong switch:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;String role = &amp;#34;admin&amp;#34;;
+
+switch (role) {
+    case &amp;#34;admin&amp;#34;:
+        System.out.println(&amp;#34;Quản trị viên&amp;#34;);
+        break;
+    case &amp;#34;user&amp;#34;:
+        System.out.println(&amp;#34;Người dùng&amp;#34;);
+        break;
+    default:
+        System.out.println(&amp;#34;Không xác định&amp;#34;);
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;khi-nào-dùng-if--khi-nào-dùng-switch&#34;&gt;Khi nào dùng if — khi nào dùng switch?
+&lt;/h2&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Trường hợp&lt;/th&gt;
+          &lt;th&gt;Nên dùng&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Điều kiện phức tạp, nhiều phép so sánh&lt;/td&gt;
+          &lt;td&gt;if — else&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;So sánh giá trị cố định (1, 2, 3… “A”, “B”)&lt;/td&gt;
+          &lt;td&gt;switch&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Có phạm vi giá trị (&amp;gt;=, &amp;lt;=, &amp;lt;, &amp;gt;)&lt;/td&gt;
+          &lt;td&gt;if — else&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Ví dụ thực tế tổng hợp&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;int age = 22;
+boolean hasTicket = true;
+
+if (age &amp;gt;= 18 &amp;amp;&amp;amp; hasTicket) {
+    System.out.println(&amp;#34;Bạn được vào cửa&amp;#34;);
+} else {
+    System.out.println(&amp;#34;Không đủ điều kiện&amp;#34;);
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Những lỗi người mới thường gặp
+❌ Quên dấu { }&lt;/p&gt;
+&lt;p&gt;❌ Nhầm = với ==&lt;/p&gt;
+&lt;p&gt;❌ Quên break trong switch&lt;/p&gt;
+&lt;p&gt;❌ Điều kiện không phải boolean&lt;/p&gt;
+&lt;h2 id=&#34;kết-luận&#34;&gt;Kết luận
+&lt;/h2&gt;&lt;p&gt;Qua bài này, bạn đã hiểu:&lt;/p&gt;
+&lt;p&gt;✔ Câu lệnh if — else&lt;/p&gt;
+&lt;p&gt;✔ else if cho nhiều điều kiện&lt;/p&gt;
+&lt;p&gt;✔ switch và break&lt;/p&gt;
+&lt;p&gt;✔ Khi nào dùng if, khi nào dùng switch&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Biến, kiểu dữ liệu &amp; toán tử trong Java — Nền tảng cho người mới</title>
+        <link>http://localhost:1313/blog/bai4/</link>
+        <pubDate>Sat, 04 Jan 2025 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/blog/bai4/</guid>
+        <description>&lt;h2 id=&#34;giới-thiệu&#34;&gt;Giới thiệu
+&lt;/h2&gt;&lt;p&gt;Sau khi bạn đã cài đặt Java và chạy được chương trình đầu tiên, bước tiếp theo rất quan trọng là:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Hiểu biến, kiểu dữ liệu và toán tử trong Java.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Đây là &lt;strong&gt;kiến thức nền tảng&lt;/strong&gt; — nếu hiểu vững, bạn sẽ học tiếp OOP, Collections, Spring Boot dễ hơn rất nhiều.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;biến-trong-java-là-gì&#34;&gt;Biến trong Java là gì?
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Biến (variable)&lt;/strong&gt; là “cái hộp” dùng để chứa dữ liệu trong chương trình.&lt;/p&gt;
+&lt;p&gt;Cú pháp khai báo biến:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;kiểu_dữ_liệu tên_biến &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; giá_trị;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Ví dụ:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;int age = 20;
+String name = &amp;#34;An&amp;#34;;
+double score = 8.5;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;👉 Java bắt buộc phải khai báo kiểu dữ liệu trước — đây gọi là ngôn ngữ kiểu tĩnh.&lt;/p&gt;
+&lt;h2 id=&#34;các-kiểu-dữ-liệu-cơ-bản-trong-java&#34;&gt;Các kiểu dữ liệu cơ bản trong Java
+&lt;/h2&gt;&lt;p&gt;Java có 2 nhóm lớn:
+🟣 1 — Kiểu nguyên thuỷ (Primitive Types)&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Tiêu chí&lt;/th&gt;
+          &lt;th&gt;Java&lt;/th&gt;
+          &lt;th&gt;JavaScript&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Các kiểu nguyên thuỷ&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;byte&lt;/code&gt;, &lt;code&gt;short&lt;/code&gt;, &lt;code&gt;int&lt;/code&gt;, &lt;code&gt;long&lt;/code&gt;, &lt;code&gt;float&lt;/code&gt;, &lt;code&gt;double&lt;/code&gt;, &lt;code&gt;char&lt;/code&gt;, &lt;code&gt;boolean&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;number&lt;/code&gt;, &lt;code&gt;bigint&lt;/code&gt;, &lt;code&gt;string&lt;/code&gt;, &lt;code&gt;boolean&lt;/code&gt;, &lt;code&gt;undefined&lt;/code&gt;, &lt;code&gt;symbol&lt;/code&gt;, &lt;code&gt;null&lt;/code&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Kiểu số&lt;/td&gt;
+          &lt;td&gt;Tách ra: số nguyên &amp;amp; số thực (&lt;code&gt;int&lt;/code&gt;, &lt;code&gt;double&lt;/code&gt;&amp;hellip;)&lt;/td&gt;
+          &lt;td&gt;Chỉ có &lt;code&gt;number&lt;/code&gt; (bao gồm cả số nguyên &amp;amp; số thực) + &lt;code&gt;bigint&lt;/code&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Chuỗi ký tự&lt;/td&gt;
+          &lt;td&gt;Không phải kiểu nguyên thuỷ (&lt;code&gt;String&lt;/code&gt; là object)&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;string&lt;/code&gt; là kiểu nguyên thuỷ&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;null / undefined&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;null&lt;/code&gt; (đại diện giá trị rỗng)&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;null&lt;/code&gt; và &lt;code&gt;undefined&lt;/code&gt; là 2 khái niệm khác nhau&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;boolean&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;true&lt;/code&gt; / &lt;code&gt;false&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;true&lt;/code&gt; / &lt;code&gt;false&lt;/code&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Ký tự&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;char&lt;/code&gt; (chỉ 1 ký tự)&lt;/td&gt;
+          &lt;td&gt;Không có &lt;code&gt;char&lt;/code&gt;, dùng &lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Ví dụ:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;int year = 2025;
+double price = 9.99;
+boolean isJavaFun = true;
+char grade = &amp;#39;A&amp;#39;;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;🟢 2 — Kiểu tham chiếu (Reference Types)
+Phổ biến nhất là:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;String name = &amp;#34;Java&amp;#34;;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Khác với C/C++, trong Java:
+👉 String là một kiểu đối tượng (class)&lt;/p&gt;
+&lt;h2 id=&#34;quy-tắc-đặt-tên-biến-trong-java&#34;&gt;Quy tắc đặt tên biến trong Java
+&lt;/h2&gt;&lt;p&gt;Bạn nên nhớ:
+✔ Bắt đầu bằng chữ / _ / $&lt;/p&gt;
+&lt;p&gt;❌ Không bắt đầu bằng số&lt;/p&gt;
+&lt;p&gt;✔ Có phân biệt hoa — thường&lt;/p&gt;
+&lt;p&gt;✔ Nên dùng camelCase&lt;/p&gt;
+&lt;p&gt;Ví dụ đúng:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;int studentAge;
+String fullName;
+boolean isOnline;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Ví dụ sai:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;int 1age;       // sai
+int class;      // sai vì class là từ khóa
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;toán-tử-trong-java&#34;&gt;Toán tử trong Java
+&lt;/h2&gt;&lt;p&gt;Toán tử (operator) là các ký hiệu dùng để thực hiện phép tính hoặc xử lý logic.
+Java có 3 nhóm chính:
+🔹 1 — Toán tử số học
+Dùng cho phép tính cơ bản&lt;/p&gt;
+&lt;p&gt;🔹 2 — Toán tử so sánh
+Dùng để so sánh hai giá trị&lt;/p&gt;
+&lt;p&gt;🔹 3 — Toán tử logic
+Dùng cho biểu thức điều kiện&lt;/p&gt;
+&lt;h2 id=&#34;ép-kiểu-dữ-liệu-casting&#34;&gt;Ép kiểu dữ liệu (Casting)
+&lt;/h2&gt;&lt;p&gt;Đôi khi bạn cần chuyển kiểu dữ liệu.&lt;/p&gt;
+&lt;p&gt;🔹 Ép kiểu tự động (nhỏ → lớn)&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;int a = 10;
+double b = a;   // OK
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;🔹 Ép kiểu tường minh (lớn → nhỏ)&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;double x = 9.8;
+int y = (int) x;   // y = 9
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;👉 Nếu không ép kiểu sẽ bị lỗi.&lt;/p&gt;
+&lt;p&gt;Những lỗi người mới hay gặp&lt;/p&gt;
+&lt;p&gt;❌ Quên dấu ;&lt;/p&gt;
+&lt;p&gt;❌ Sai kiểu dữ liệu&lt;/p&gt;
+&lt;p&gt;❌ Nhầm = và ==&lt;/p&gt;
+&lt;p&gt;❌ Đặt tên biến sai quy tắc&lt;/p&gt;
+&lt;p&gt;Ví dụ sai:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;if (a = 5) { }   // sai
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Ví dụ đúng:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;if (a == 5) { }
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;kết-luận&#34;&gt;Kết luận
+&lt;/h2&gt;&lt;p&gt;Trong bài này, bạn đã nắm được:&lt;/p&gt;
+&lt;p&gt;✔ Biến là gì&lt;/p&gt;
+&lt;p&gt;✔ Các kiểu dữ liệu trong Java&lt;/p&gt;
+&lt;p&gt;✔ Quy tắc đặt tên biến&lt;/p&gt;
+&lt;p&gt;✔ Hằng số với final&lt;/p&gt;
+&lt;p&gt;✔ Các toán tử cơ bản&lt;/p&gt;
+&lt;p&gt;✔ Cách ép kiểu dữ liệu&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Cài đặt Java &amp; viết chương trình đầu tiên — Hướng dẫn cho người mới</title>
+        <link>http://localhost:1313/blog/bai3/</link>
+        <pubDate>Fri, 03 Jan 2025 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/blog/bai3/</guid>
+        <description>&lt;p&gt;&lt;img src=&#34;https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Java programming&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;giới-thiệu&#34;&gt;Giới thiệu
+&lt;/h2&gt;&lt;p&gt;Nếu bạn là người mới và vừa nghe tới Java, chắc hẳn bạn sẽ tự hỏi:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Làm sao để cài Java và chạy chương trình đầu tiên?&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Đừng lo 😊&lt;br&gt;
+Bài viết này sẽ hướng dẫn bạn &lt;strong&gt;từng bước — đơn giản — dễ làm theo&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;bước-1--cài-java-development-kit-jdk&#34;&gt;Bước 1 — Cài Java Development Kit (JDK)
+&lt;/h2&gt;&lt;p&gt;👉 Java muốn chạy được thì bạn cần cài &lt;strong&gt;JDK&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;JDK bao gồm:&lt;/p&gt;
+&lt;p&gt;✔ Trình biên dịch Java&lt;br&gt;
+✔ Thư viện Java&lt;br&gt;
+✔ Công cụ chạy chương trình&lt;/p&gt;
+&lt;h3 id=&#34;-tải-jdk-tại&#34;&gt;🔽 Tải JDK tại:
+&lt;/h3&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.oracle.com/java/technologies/downloads/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.oracle.com/java/technologies/downloads/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Sau đó:&lt;/p&gt;
+&lt;p&gt;1️⃣ Chọn phiên bản mới nhất (JDK 21 hoặc 23 đều OK)&lt;br&gt;
+2️⃣ Tải bản phù hợp Windows / macOS / Linux&lt;br&gt;
+3️⃣ Cài đặt như phần mềm bình thường&lt;/p&gt;
+&lt;p&gt;💡 Sau khi cài xong, bạn có thể kiểm tra bằng lệnh:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;java -version
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Nếu hiện ra phiên bản Java là bạn đã làm đúng 👏&lt;/p&gt;
+&lt;h2 id=&#34;bước-2--tạo-file-java-đầu-tiên&#34;&gt;Bước 2 — Tạo file Java đầu tiên
+&lt;/h2&gt;&lt;p&gt;Bạn mở Notepad / VS Code / IntelliJ / Eclipse…
+Tạo file:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt; Hello.java
+&lt;/code&gt;&lt;/pre&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;class Hello {
+    public static void main(String[] args) {
+        System.out.println(&amp;#34;Xin chào Java!&amp;#34;);
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;bước-3--biên-dịch--chạy-chương-trình&#34;&gt;Bước 3 — Biên dịch &amp;amp; chạy chương trình
+&lt;/h2&gt;&lt;p&gt;🟣 Bước 3.1 — Biên dịch&lt;/p&gt;
+&lt;p&gt;Mở Terminal / CMD tại thư mục chứa file và gõ:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt; javac Hello.java
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Nếu không lỗi → sẽ xuất hiện file:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt; Hello.class
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Đây là bytecode Java.&lt;/p&gt;
+&lt;p&gt;🟢 Bước 3.2 — Chạy chương trình&lt;/p&gt;
+&lt;p&gt;Chạy tiếp:java Hello
+👉 Kết quả: Xin chào Java!
+🎉 Chúc mừng! Bạn đã chạy thành công chương trình Java đầu tiên.&lt;/p&gt;
+&lt;h2 id=&#34;giải-thích-chương-trình-trên&#34;&gt;Giải thích chương trình trên
+&lt;/h2&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;class Hello {
+    public static void main(String[] args) {
+        System.out.println(&amp;#34;Xin chào Java!&amp;#34;);
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;✔ class Hello → khai báo 1 lớp tên Hello
+✔ main() → điểm bắt đầu chương trình
+✔ System.out.println() → in ra màn hình&lt;/p&gt;
+&lt;p&gt;👉 Không có main() thì chương trình không chạy được.&lt;/p&gt;
+&lt;h2 id=&#34;những-lỗi-người-mới-hay-gặp&#34;&gt;Những lỗi người mới hay gặp
+&lt;/h2&gt;&lt;p&gt;❌ Quên tên file phải trùng tên class&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;File: Hello.java
+Class: Hello
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Phải giống nhau!&lt;/p&gt;
+&lt;p&gt;❌ Sai dấu ngoặc {}
+Java rất nghiêm về cú pháp. Thiếu 1 dấu ngoặc cũng lỗi.&lt;/p&gt;
+&lt;p&gt;❌ Gõ nhầm lệnh
+Phải là:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;javac Hello.java
+java Hello
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;⚠️ Không có .java ở lệnh thứ hai.&lt;/p&gt;
+&lt;h2 id=&#34;nên-dùng-ide-nào&#34;&gt;Nên dùng IDE nào?
+&lt;/h2&gt;&lt;p&gt;Nếu mới học, bạn có thể dùng:&lt;/p&gt;
+&lt;p&gt;🟢 VS Code
+🟣 IntelliJ IDEA (phổ biến nhất)
+🔵 Eclipse&lt;/p&gt;
+&lt;p&gt;IDE sẽ giúp:&lt;/p&gt;
+&lt;p&gt;✔ Báo lỗi khi gõ code
+✔ Tự động format
+✔ Chạy code dễ dàng&lt;/p&gt;
+&lt;h2 id=&#34;kết-luận&#34;&gt;Kết luận
+&lt;/h2&gt;&lt;p&gt;Trong bài này, bạn đã biết cách:&lt;/p&gt;
+&lt;p&gt;✔ Cài đặt JDK&lt;/p&gt;
+&lt;p&gt;✔ Tạo file Java đầu tiên&lt;/p&gt;
+&lt;p&gt;✔ Biên dịch &amp;amp; chạy chương trình&lt;/p&gt;
+&lt;p&gt;✔ Hiểu cấu trúc cơ bản của Java&lt;/p&gt;
+&lt;p&gt;👉 Đây là bước khởi đầu quan trọng trước khi học OOP, Collection, Spring Boot,…&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Java vs JavaScript — Khác nhau ở điểm nào?</title>
+        <link>http://localhost:1313/blog/bai2/</link>
+        <pubDate>Thu, 02 Jan 2025 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/blog/bai2/</guid>
+        <description>&lt;p&gt;&lt;img src=&#34;https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Java vs JavaScript&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;giới-thiệu&#34;&gt;Giới thiệu
+&lt;/h2&gt;&lt;p&gt;Rất nhiều người mới học lập trình thường thắc mắc:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Java và JavaScript có giống nhau không?&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Tên gọi thì gần giống, nhưng thực tế &lt;strong&gt;hai ngôn ngữ này hoàn toàn khác nhau&lt;/strong&gt; — từ mục đích sử dụng, cách chạy cho đến môi trường phát triển.&lt;/p&gt;
+&lt;p&gt;Ở bài viết này, chúng ta sẽ cùng phân biệt một cách &lt;strong&gt;đơn giản – dễ hiểu – không học thuật&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;java-là-gì&#34;&gt;Java là gì?
+&lt;/h2&gt;&lt;p&gt;👉 Java là &lt;strong&gt;ngôn ngữ lập trình hướng đối tượng&lt;/strong&gt;, ra mắt năm 1995.&lt;/p&gt;
+&lt;p&gt;Java thường dùng cho:&lt;/p&gt;
+&lt;p&gt;✔ Backend / server&lt;br&gt;
+✔ Hệ thống doanh nghiệp&lt;br&gt;
+✔ Ngân hàng&lt;br&gt;
+✔ Ứng dụng Android&lt;br&gt;
+✔ Ứng dụng desktop&lt;/p&gt;
+&lt;p&gt;Java chạy dựa trên &lt;strong&gt;JVM (Java Virtual Machine)&lt;/strong&gt; với triết lý:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Write once, run anywhere&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;javascript-là-gì&#34;&gt;JavaScript là gì?
+&lt;/h2&gt;&lt;p&gt;JavaScript cũng ra mắt năm 1995 😄&lt;br&gt;
+Nhưng JavaScript sinh ra với mục đích:&lt;/p&gt;
+&lt;p&gt;✔ Làm web trở nên động&lt;br&gt;
+✔ Chạy trên trình duyệt&lt;/p&gt;
+&lt;p&gt;Ngày nay JavaScript còn có thể chạy ở backend thông qua &lt;strong&gt;Node.js&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Bạn dùng JavaScript khi làm:&lt;/p&gt;
+&lt;p&gt;✔ Website&lt;br&gt;
+✔ Ứng dụng web&lt;br&gt;
+✔ Frontend (React, Vue, Angular)&lt;br&gt;
+✔ Backend (Node.js)&lt;br&gt;
+✔ Mobile (React Native)&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;bảng-so-sánh-nhanh&#34;&gt;Bảng so sánh nhanh
+&lt;/h2&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Tiêu chí&lt;/th&gt;
+          &lt;th&gt;Java&lt;/th&gt;
+          &lt;th&gt;JavaScript&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Loại ngôn ngữ&lt;/td&gt;
+          &lt;td&gt;Hướng đối tượng&lt;/td&gt;
+          &lt;td&gt;Thông dịch&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Chạy ở đâu?&lt;/td&gt;
+          &lt;td&gt;JVM (server/máy tính)&lt;/td&gt;
+          &lt;td&gt;Trình duyệt và Node.js&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Phổ biến với&lt;/td&gt;
+          &lt;td&gt;Backend, Android, doanh nghiệp&lt;/td&gt;
+          &lt;td&gt;Web, frontend, backend&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Kiểu dữ liệu&lt;/td&gt;
+          &lt;td&gt;Kiểm tra kiểu chặt chẽ&lt;/td&gt;
+          &lt;td&gt;Linh hoạt&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Cú pháp&lt;/td&gt;
+          &lt;td&gt;Nghiêm ngặt hơn&lt;/td&gt;
+          &lt;td&gt;Dễ viết hơn&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;ví-dụ-java&#34;&gt;Ví dụ Java
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Hello&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;static&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;(String&lt;span style=&#34;color:#f92672&#34;&gt;[]&lt;/span&gt; args) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        System.&lt;span style=&#34;color:#a6e22e&#34;&gt;out&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;println&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Xin chào từ Java!&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;ví-dụ-javascript&#34;&gt;Ví dụ JavaScript
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;console&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;log&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Xin chào từ JavaScript!&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;vì-sao-tên-lại-giống-nhau&#34;&gt;Vì sao tên lại giống nhau?
+&lt;/h2&gt;&lt;p&gt;Đây là một câu chuyện… hơi “marketing” 🤭&lt;/p&gt;
+&lt;p&gt;Khi JavaScript ra đời, Java đang rất nổi tiếng, nên nhà phát triển trình duyệt đã đặt tên “JavaScript” để:&lt;/p&gt;
+&lt;p&gt;👉 tận dụng độ nổi tiếng của Java&lt;/p&gt;
+&lt;p&gt;Nhưng:&lt;/p&gt;
+&lt;p&gt;Java ≠ JavaScript
+Giống như
+car ≠ carpet 😆&lt;/p&gt;
+&lt;h2 id=&#34;nên-học-cái-nào-trước&#34;&gt;Nên học cái nào trước?
+&lt;/h2&gt;&lt;p&gt;💡 Nếu bạn thích:&lt;/p&gt;
+&lt;p&gt;🟢 Web / Frontend → Học JavaScript trước&lt;/p&gt;
+&lt;p&gt;🟣 Backend / Android / hệ thống lớn → Học Java&lt;/p&gt;
+&lt;h2 id=&#34;kết-luận&#34;&gt;Kết luận
+&lt;/h2&gt;&lt;p&gt;Dù tên gọi giống nhau, nhưng:&lt;/p&gt;
+&lt;p&gt;✔ Java và JavaScript là hai ngôn ngữ hoàn toàn khác biệt&lt;/p&gt;
+&lt;p&gt;✔ Dùng cho hai mục đích khác nhau&lt;/p&gt;
+&lt;p&gt;✔ Cả hai đều rất mạnh và phổ biến&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Java là gì? Vì sao Java vẫn được dùng rộng rãi đến ngày nay</title>
+        <link>http://localhost:1313/blog/bai1/</link>
+        <pubDate>Wed, 01 Jan 2025 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/blog/bai1/</guid>
+        <description>&lt;p&gt;&lt;img src=&#34;https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Java programming&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;giới-thiệu&#34;&gt;Giới thiệu
+&lt;/h2&gt;&lt;p&gt;Khi bắt đầu tìm hiểu về lập trình, rất nhiều người nghe đến cái tên &lt;strong&gt;Java&lt;/strong&gt;.&lt;br&gt;
+Dù đã xuất hiện từ rất lâu, Java vẫn được sử dụng rộng rãi trong các hệ thống lớn, ngân hàng, doanh nghiệp và các nền tảng backend hiện đại.&lt;/p&gt;
+&lt;p&gt;Vậy &lt;strong&gt;Java là gì?&lt;/strong&gt;&lt;br&gt;
+Vì sao sau gần 30 năm, Java vẫn giữ được vị thế của mình trong ngành phần mềm?&lt;/p&gt;
+&lt;p&gt;Bài viết này sẽ giúp bạn hiểu Java một cách &lt;strong&gt;đơn giản, dễ tiếp cận&lt;/strong&gt;, đặc biệt phù hợp với người mới.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;java-là-gì&#34;&gt;Java là gì?
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Java&lt;/strong&gt; là một ngôn ngữ lập trình hướng đối tượng, được phát triển bởi &lt;strong&gt;Sun Microsystems&lt;/strong&gt; và ra mắt lần đầu vào năm &lt;strong&gt;1995&lt;/strong&gt;.&lt;br&gt;
+Hiện nay Java được duy trì và phát triển bởi &lt;strong&gt;Oracle&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Ngay từ đầu, Java được thiết kế với mục tiêu:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Dễ học&lt;/li&gt;
+&lt;li&gt;Ổn định&lt;/li&gt;
+&lt;li&gt;Chạy được trên nhiều hệ điều hành&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Triết lý nổi tiếng của Java là:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Write once, run anywhere&lt;/strong&gt;&lt;br&gt;
+&lt;em&gt;(Viết một lần, chạy ở mọi nơi)&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;java-chạy-được-trên-nhiều-hệ-điều-hành-như-thế-nào&#34;&gt;Java chạy được trên nhiều hệ điều hành như thế nào?
+&lt;/h2&gt;&lt;p&gt;Khác với C hoặc C++, Java &lt;strong&gt;không biên dịch trực tiếp sang mã máy&lt;/strong&gt;.&lt;br&gt;
+Thay vào đó, Java sử dụng &lt;strong&gt;Java Virtual Machine (JVM)&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Quy trình hoạt động:&lt;/p&gt;
+&lt;p&gt;Mã nguồn (.java)&lt;br&gt;
+↓&lt;br&gt;
+Trình biên dịch Java&lt;br&gt;
+↓&lt;br&gt;
+Bytecode (.class)&lt;br&gt;
+↓&lt;br&gt;
+Java Virtual Machine (JVM)&lt;br&gt;
+↓&lt;br&gt;
+Hệ điều hành&lt;/p&gt;
+&lt;p&gt;Chỉ cần máy tính có &lt;strong&gt;JVM&lt;/strong&gt;, chương trình Java có thể chạy mà không cần chỉnh sửa mã nguồn.&lt;/p&gt;
+&lt;p&gt;👉 Đây là lý do Java được dùng rất nhiều trong các hệ thống lớn.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;java-có-khó-học-không&#34;&gt;Java có khó học không?
+&lt;/h2&gt;&lt;p&gt;Câu trả lời là: &lt;strong&gt;không quá khó&lt;/strong&gt;, đặc biệt nếu bạn học bài bản.&lt;/p&gt;
+&lt;p&gt;Java:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Có cú pháp rõ ràng&lt;/li&gt;
+&lt;li&gt;Chặt chẽ về kiểu dữ liệu&lt;/li&gt;
+&lt;li&gt;Ép bạn viết code có cấu trúc&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Chính vì vậy, Java thường được dùng để &lt;strong&gt;dạy lập trình cơ bản và tư duy OOP&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;lập-trình-hướng-đối-tượng-trong-java&#34;&gt;Lập trình hướng đối tượng trong Java
+&lt;/h2&gt;&lt;p&gt;Java là một ngôn ngữ &lt;strong&gt;hướng đối tượng&lt;/strong&gt; (Object-Oriented Programming – OOP).&lt;/p&gt;
+&lt;p&gt;Các khái niệm quan trọng gồm:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Class&lt;/strong&gt; (lớp)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Object&lt;/strong&gt; (đối tượng)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Kế thừa&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Đa hình&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Đóng gói&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Ví dụ đơn giản:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Student&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    String name;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; age;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;sayHello&lt;/span&gt;() {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        System.&lt;span style=&#34;color:#a6e22e&#34;&gt;out&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;println&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Xin chào, tôi là &amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; name);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;kết-luận&#34;&gt;Kết luận
+&lt;/h2&gt;&lt;p&gt;Java là một trong những ngôn ngữ lập trình ổn định, mạnh mẽ và bền bỉ nhất cho đến hôm nay.
+Nếu bạn muốn theo đuổi:&lt;/p&gt;
+&lt;p&gt;✔ Backend&lt;/p&gt;
+&lt;p&gt;✔ Android&lt;/p&gt;
+&lt;p&gt;✔ Doanh nghiệp / ngân hàng&lt;/p&gt;
+&lt;p&gt;thì Java là lựa chọn cực kỳ phù hợp.&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

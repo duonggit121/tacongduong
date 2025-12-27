@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="vi" dir="ltr">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="\nGiới thiệu\rRất nhiều người mới học lập trình thường thắc mắc:\nJava và JavaScript có giống nhau không?\nTên gọi thì gần giống, nhưng thực tế hai ngôn ngữ này hoàn toàn khác nhau — từ mục đích sử dụng, cách chạy cho đến môi trường phát triển.\nỞ bài viết này, chúng ta sẽ cùng phân biệt một cách đơn giản – dễ hiểu – không học thuật.\n">
+<title>Java vs JavaScript — Khác nhau ở điểm nào?</title>
+
+<link rel='canonical' href='http://localhost:1313/blog/bai2/'>
+
+<link rel="stylesheet" href="/scss/style.min.143b637336bf0beb4d17a917245b9e67e921e8f4345a3bc837cf21cf7f08a12d.css"><meta property='og:title' content="Java vs JavaScript — Khác nhau ở điểm nào?">
+<meta property='og:description' content="\nGiới thiệu\rRất nhiều người mới học lập trình thường thắc mắc:\nJava và JavaScript có giống nhau không?\nTên gọi thì gần giống, nhưng thực tế hai ngôn ngữ này hoàn toàn khác nhau — từ mục đích sử dụng, cách chạy cho đến môi trường phát triển.\nỞ bài viết này, chúng ta sẽ cùng phân biệt một cách đơn giản – dễ hiểu – không học thuật.\n">
+<meta property='og:url' content='http://localhost:1313/blog/bai2/'>
+<meta property='og:site_name' content='Tạ Công Dương'>
+<meta property='og:type' content='article'><meta property='article:section' content='Blog' /><meta property='article:published_time' content='2025-01-02T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-01-02T00:00:00&#43;00:00'/>
+<meta name="twitter:title" content="Java vs JavaScript — Khác nhau ở điểm nào?">
+<meta name="twitter:description" content="\nGiới thiệu\rRất nhiều người mới học lập trình thường thắc mắc:\nJava và JavaScript có giống nhau không?\nTên gọi thì gần giống, nhưng thực tế hai ngôn ngữ này hoàn toàn khác nhau — từ mục đích sử dụng, cách chạy cho đến môi trường phát triển.\nỞ bài viết này, chúng ta sẽ cùng phân biệt một cách đơn giản – dễ hiểu – không học thuật.\n">
+  
+   
+  <link rel="stylesheet" href="/scss/blog.min.99523269ebf82a72543dc2451aa5dc1ebf10bc5cd9846e01e1b0243e70543dfc.css">
+
+    </head>
+    <body class="">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column compact"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Hiển thị Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu_b5976aa1afdc1d2e.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">👨‍💻</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Tạ Công Dương</a></h1>
+            <h2 class="site-description">cùng phát triển đam mê</h2>
+        </div>
+    </header><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                <span>Trang chủ</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/about/' >
+                
+                
+                
+                <span>Giới thiệu</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/blog/' >
+                
+                
+                
+                <span>Blog</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/achievements/' >
+                
+                
+                
+                <span>Thành tựu</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>Chế độ nền tối</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+            <main class="main full-width">
+
+<article class="article-content">
+
+  
+  <h1 class="article-title">
+    Java vs JavaScript — Khác nhau ở điểm nào?
+  </h1>
+
+  
+  
+    <p class="article-date">
+      02/01/2025
+    </p>
+  
+
+  
+  <p><img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="Java vs JavaScript"
+	
+	
+></p>
+<h2 id="giới-thiệu">Giới thiệu
+</h2><p>Rất nhiều người mới học lập trình thường thắc mắc:</p>
+<blockquote>
+<p>Java và JavaScript có giống nhau không?</p>
+</blockquote>
+<p>Tên gọi thì gần giống, nhưng thực tế <strong>hai ngôn ngữ này hoàn toàn khác nhau</strong> — từ mục đích sử dụng, cách chạy cho đến môi trường phát triển.</p>
+<p>Ở bài viết này, chúng ta sẽ cùng phân biệt một cách <strong>đơn giản – dễ hiểu – không học thuật</strong>.</p>
+<hr>
+<h2 id="java-là-gì">Java là gì?
+</h2><p>👉 Java là <strong>ngôn ngữ lập trình hướng đối tượng</strong>, ra mắt năm 1995.</p>
+<p>Java thường dùng cho:</p>
+<p>✔ Backend / server<br>
+✔ Hệ thống doanh nghiệp<br>
+✔ Ngân hàng<br>
+✔ Ứng dụng Android<br>
+✔ Ứng dụng desktop</p>
+<p>Java chạy dựa trên <strong>JVM (Java Virtual Machine)</strong> với triết lý:</p>
+<blockquote>
+<p>Write once, run anywhere</p>
+</blockquote>
+<hr>
+<h2 id="javascript-là-gì">JavaScript là gì?
+</h2><p>JavaScript cũng ra mắt năm 1995 😄<br>
+Nhưng JavaScript sinh ra với mục đích:</p>
+<p>✔ Làm web trở nên động<br>
+✔ Chạy trên trình duyệt</p>
+<p>Ngày nay JavaScript còn có thể chạy ở backend thông qua <strong>Node.js</strong>.</p>
+<p>Bạn dùng JavaScript khi làm:</p>
+<p>✔ Website<br>
+✔ Ứng dụng web<br>
+✔ Frontend (React, Vue, Angular)<br>
+✔ Backend (Node.js)<br>
+✔ Mobile (React Native)</p>
+<hr>
+<h2 id="bảng-so-sánh-nhanh">Bảng so sánh nhanh
+</h2><table>
+  <thead>
+      <tr>
+          <th>Tiêu chí</th>
+          <th>Java</th>
+          <th>JavaScript</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Loại ngôn ngữ</td>
+          <td>Hướng đối tượng</td>
+          <td>Thông dịch</td>
+      </tr>
+      <tr>
+          <td>Chạy ở đâu?</td>
+          <td>JVM (server/máy tính)</td>
+          <td>Trình duyệt và Node.js</td>
+      </tr>
+      <tr>
+          <td>Phổ biến với</td>
+          <td>Backend, Android, doanh nghiệp</td>
+          <td>Web, frontend, backend</td>
+      </tr>
+      <tr>
+          <td>Kiểu dữ liệu</td>
+          <td>Kiểm tra kiểu chặt chẽ</td>
+          <td>Linh hoạt</td>
+      </tr>
+      <tr>
+          <td>Cú pháp</td>
+          <td>Nghiêm ngặt hơn</td>
+          <td>Dễ viết hơn</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="ví-dụ-java">Ví dụ Java
+</h2><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Hello</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String<span style="color:#f92672">[]</span> args) {
+</span></span><span style="display:flex;"><span>        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Xin chào từ Java!&#34;</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="ví-dụ-javascript">Ví dụ JavaScript
+</h2><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Xin chào từ JavaScript!&#34;</span>);
+</span></span></code></pre></div><h2 id="vì-sao-tên-lại-giống-nhau">Vì sao tên lại giống nhau?
+</h2><p>Đây là một câu chuyện… hơi “marketing” 🤭</p>
+<p>Khi JavaScript ra đời, Java đang rất nổi tiếng, nên nhà phát triển trình duyệt đã đặt tên “JavaScript” để:</p>
+<p>👉 tận dụng độ nổi tiếng của Java</p>
+<p>Nhưng:</p>
+<p>Java ≠ JavaScript
+Giống như
+car ≠ carpet 😆</p>
+<h2 id="nên-học-cái-nào-trước">Nên học cái nào trước?
+</h2><p>💡 Nếu bạn thích:</p>
+<p>🟢 Web / Frontend → Học JavaScript trước</p>
+<p>🟣 Backend / Android / hệ thống lớn → Học Java</p>
+<h2 id="kết-luận">Kết luận
+</h2><p>Dù tên gọi giống nhau, nhưng:</p>
+<p>✔ Java và JavaScript là hai ngôn ngữ hoàn toàn khác biệt</p>
+<p>✔ Dùng cho hai mục đích khác nhau</p>
+<p>✔ Cả hai đều rất mạnh và phổ biến</p>
+
+
+</article>
+
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.c8c8d8c035e1ac96d86ad3ba8c62af627af4c8a1b48394992a61cc0e5584db23.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

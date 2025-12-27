@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="vi" dir="ltr">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="Giới thiệu\rSau khi bạn đã cài đặt Java và chạy được chương trình đầu tiên, bước tiếp theo rất quan trọng là:\nHiểu biến, kiểu dữ liệu và toán tử trong Java.\nĐây là kiến thức nền tảng — nếu hiểu vững, bạn sẽ học tiếp OOP, Collections, Spring Boot dễ hơn rất nhiều.\nBiến trong Java là gì?\rBiến (variable) là “cái hộp” dùng để chứa dữ liệu trong chương trình.\n">
+<title>Biến, kiểu dữ liệu &amp; toán tử trong Java — Nền tảng cho người mới</title>
+
+<link rel='canonical' href='http://localhost:1313/blog/bai4/'>
+
+<link rel="stylesheet" href="/scss/style.min.143b637336bf0beb4d17a917245b9e67e921e8f4345a3bc837cf21cf7f08a12d.css"><meta property='og:title' content="Biến, kiểu dữ liệu & toán tử trong Java — Nền tảng cho người mới">
+<meta property='og:description' content="Giới thiệu\rSau khi bạn đã cài đặt Java và chạy được chương trình đầu tiên, bước tiếp theo rất quan trọng là:\nHiểu biến, kiểu dữ liệu và toán tử trong Java.\nĐây là kiến thức nền tảng — nếu hiểu vững, bạn sẽ học tiếp OOP, Collections, Spring Boot dễ hơn rất nhiều.\nBiến trong Java là gì?\rBiến (variable) là “cái hộp” dùng để chứa dữ liệu trong chương trình.\n">
+<meta property='og:url' content='http://localhost:1313/blog/bai4/'>
+<meta property='og:site_name' content='Tạ Công Dương'>
+<meta property='og:type' content='article'><meta property='article:section' content='Blog' /><meta property='article:published_time' content='2025-01-04T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-01-04T00:00:00&#43;00:00'/>
+<meta name="twitter:title" content="Biến, kiểu dữ liệu & toán tử trong Java — Nền tảng cho người mới">
+<meta name="twitter:description" content="Giới thiệu\rSau khi bạn đã cài đặt Java và chạy được chương trình đầu tiên, bước tiếp theo rất quan trọng là:\nHiểu biến, kiểu dữ liệu và toán tử trong Java.\nĐây là kiến thức nền tảng — nếu hiểu vững, bạn sẽ học tiếp OOP, Collections, Spring Boot dễ hơn rất nhiều.\nBiến trong Java là gì?\rBiến (variable) là “cái hộp” dùng để chứa dữ liệu trong chương trình.\n">
+  
+   
+  <link rel="stylesheet" href="/scss/blog.min.99523269ebf82a72543dc2451aa5dc1ebf10bc5cd9846e01e1b0243e70543dfc.css">
+
+    </head>
+    <body class="">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column compact"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Hiển thị Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu_b5976aa1afdc1d2e.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">👨‍💻</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Tạ Công Dương</a></h1>
+            <h2 class="site-description">cùng phát triển đam mê</h2>
+        </div>
+    </header><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                <span>Trang chủ</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/about/' >
+                
+                
+                
+                <span>Giới thiệu</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/blog/' >
+                
+                
+                
+                <span>Blog</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/achievements/' >
+                
+                
+                
+                <span>Thành tựu</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>Chế độ nền tối</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+            <main class="main full-width">
+
+<article class="article-content">
+
+  
+  <h1 class="article-title">
+    Biến, kiểu dữ liệu &amp; toán tử trong Java — Nền tảng cho người mới
+  </h1>
+
+  
+  
+    <p class="article-date">
+      04/01/2025
+    </p>
+  
+
+  
+  <h2 id="giới-thiệu">Giới thiệu
+</h2><p>Sau khi bạn đã cài đặt Java và chạy được chương trình đầu tiên, bước tiếp theo rất quan trọng là:</p>
+<blockquote>
+<p>Hiểu biến, kiểu dữ liệu và toán tử trong Java.</p>
+</blockquote>
+<p>Đây là <strong>kiến thức nền tảng</strong> — nếu hiểu vững, bạn sẽ học tiếp OOP, Collections, Spring Boot dễ hơn rất nhiều.</p>
+<hr>
+<h2 id="biến-trong-java-là-gì">Biến trong Java là gì?
+</h2><p><strong>Biến (variable)</strong> là “cái hộp” dùng để chứa dữ liệu trong chương trình.</p>
+<p>Cú pháp khai báo biến:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>kiểu_dữ_liệu tên_biến <span style="color:#f92672">=</span> giá_trị;
+</span></span></code></pre></div><p>Ví dụ:</p>
+<pre tabindex="0"><code>int age = 20;
+String name = &#34;An&#34;;
+double score = 8.5;
+</code></pre><p>👉 Java bắt buộc phải khai báo kiểu dữ liệu trước — đây gọi là ngôn ngữ kiểu tĩnh.</p>
+<h2 id="các-kiểu-dữ-liệu-cơ-bản-trong-java">Các kiểu dữ liệu cơ bản trong Java
+</h2><p>Java có 2 nhóm lớn:
+🟣 1 — Kiểu nguyên thuỷ (Primitive Types)</p>
+<table>
+  <thead>
+      <tr>
+          <th>Tiêu chí</th>
+          <th>Java</th>
+          <th>JavaScript</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Các kiểu nguyên thuỷ</td>
+          <td><code>byte</code>, <code>short</code>, <code>int</code>, <code>long</code>, <code>float</code>, <code>double</code>, <code>char</code>, <code>boolean</code></td>
+          <td><code>number</code>, <code>bigint</code>, <code>string</code>, <code>boolean</code>, <code>undefined</code>, <code>symbol</code>, <code>null</code></td>
+      </tr>
+      <tr>
+          <td>Kiểu số</td>
+          <td>Tách ra: số nguyên &amp; số thực (<code>int</code>, <code>double</code>&hellip;)</td>
+          <td>Chỉ có <code>number</code> (bao gồm cả số nguyên &amp; số thực) + <code>bigint</code></td>
+      </tr>
+      <tr>
+          <td>Chuỗi ký tự</td>
+          <td>Không phải kiểu nguyên thuỷ (<code>String</code> là object)</td>
+          <td><code>string</code> là kiểu nguyên thuỷ</td>
+      </tr>
+      <tr>
+          <td>null / undefined</td>
+          <td><code>null</code> (đại diện giá trị rỗng)</td>
+          <td><code>null</code> và <code>undefined</code> là 2 khái niệm khác nhau</td>
+      </tr>
+      <tr>
+          <td>boolean</td>
+          <td><code>true</code> / <code>false</code></td>
+          <td><code>true</code> / <code>false</code></td>
+      </tr>
+      <tr>
+          <td>Ký tự</td>
+          <td><code>char</code> (chỉ 1 ký tự)</td>
+          <td>Không có <code>char</code>, dùng <code>string</code></td>
+      </tr>
+  </tbody>
+</table>
+<p>Ví dụ:</p>
+<pre tabindex="0"><code>int year = 2025;
+double price = 9.99;
+boolean isJavaFun = true;
+char grade = &#39;A&#39;;
+</code></pre><p>🟢 2 — Kiểu tham chiếu (Reference Types)
+Phổ biến nhất là:</p>
+<pre tabindex="0"><code>String name = &#34;Java&#34;;
+</code></pre><p>Khác với C/C++, trong Java:
+👉 String là một kiểu đối tượng (class)</p>
+<h2 id="quy-tắc-đặt-tên-biến-trong-java">Quy tắc đặt tên biến trong Java
+</h2><p>Bạn nên nhớ:
+✔ Bắt đầu bằng chữ / _ / $</p>
+<p>❌ Không bắt đầu bằng số</p>
+<p>✔ Có phân biệt hoa — thường</p>
+<p>✔ Nên dùng camelCase</p>
+<p>Ví dụ đúng:</p>
+<pre tabindex="0"><code>int studentAge;
+String fullName;
+boolean isOnline;
+</code></pre><p>Ví dụ sai:</p>
+<pre tabindex="0"><code>int 1age;       // sai
+int class;      // sai vì class là từ khóa
+</code></pre><h2 id="toán-tử-trong-java">Toán tử trong Java
+</h2><p>Toán tử (operator) là các ký hiệu dùng để thực hiện phép tính hoặc xử lý logic.
+Java có 3 nhóm chính:
+🔹 1 — Toán tử số học
+Dùng cho phép tính cơ bản</p>
+<p>🔹 2 — Toán tử so sánh
+Dùng để so sánh hai giá trị</p>
+<p>🔹 3 — Toán tử logic
+Dùng cho biểu thức điều kiện</p>
+<h2 id="ép-kiểu-dữ-liệu-casting">Ép kiểu dữ liệu (Casting)
+</h2><p>Đôi khi bạn cần chuyển kiểu dữ liệu.</p>
+<p>🔹 Ép kiểu tự động (nhỏ → lớn)</p>
+<pre tabindex="0"><code>int a = 10;
+double b = a;   // OK
+</code></pre><p>🔹 Ép kiểu tường minh (lớn → nhỏ)</p>
+<pre tabindex="0"><code>double x = 9.8;
+int y = (int) x;   // y = 9
+</code></pre><p>👉 Nếu không ép kiểu sẽ bị lỗi.</p>
+<p>Những lỗi người mới hay gặp</p>
+<p>❌ Quên dấu ;</p>
+<p>❌ Sai kiểu dữ liệu</p>
+<p>❌ Nhầm = và ==</p>
+<p>❌ Đặt tên biến sai quy tắc</p>
+<p>Ví dụ sai:</p>
+<pre tabindex="0"><code>if (a = 5) { }   // sai
+</code></pre><p>Ví dụ đúng:</p>
+<pre tabindex="0"><code>if (a == 5) { }
+</code></pre><h2 id="kết-luận">Kết luận
+</h2><p>Trong bài này, bạn đã nắm được:</p>
+<p>✔ Biến là gì</p>
+<p>✔ Các kiểu dữ liệu trong Java</p>
+<p>✔ Quy tắc đặt tên biến</p>
+<p>✔ Hằng số với final</p>
+<p>✔ Các toán tử cơ bản</p>
+<p>✔ Cách ép kiểu dữ liệu</p>
+
+
+</article>
+
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.c8c8d8c035e1ac96d86ad3ba8c62af627af4c8a1b48394992a61cc0e5584db23.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

@@ -1,0 +1,148 @@
+@charset "UTF-8";
+/* =========================
+   BLOG / ARTICLE PAGE — DARK MODE
+   ========================= */
+/* NỘI DUNG CHÍNH */
+.article-content {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #d1d5db;
+  /* xám nhạt → dễ đọc hơn trắng */ }
+
+/* TIÊU ĐỀ BÀI VIẾT */
+.article-title {
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 1.25;
+  color: #f3f4f6;
+  /* gần trắng nhưng không chói */ }
+
+/* HEADING TRONG BÀI */
+.article-content h2 {
+  font-size: 24px;
+  margin-top: 40px;
+  color: #e5e7eb;
+  /* sáng hơn text 1 chút */ }
+
+.article-content h3 {
+  font-size: 19px;
+  margin-top: 28px;
+  color: #e5e7eb; }
+
+/* ĐOẠN QUOTE */
+.article-content blockquote {
+  color: #e5e7eb;
+  border-left: 3px solid #6b7280;
+  padding-left: 14px;
+  opacity: .9; }
+
+/* LINK */
+.article-content a {
+  color: #93c5fd;
+  /* xanh dịu */
+  text-decoration: none; }
+
+.article-content a:hover {
+  color: #bfdbfe;
+  text-decoration: underline; }
+
+/* CODE BLOCK */
+.highlight {
+  border-radius: 12px;
+  font-size: 14px;
+  background: #111827;
+  /* than đen */
+  color: #e5e7eb;
+  border: 1px solid #1f2937; }
+
+/* INLINE CODE */
+.article-content code {
+  background: #1f2937;
+  color: #f9fafb;
+  padding: 2px 6px;
+  border-radius: 6px; }
+
+/* ẢNH TRONG BÀI */
+.article-content img {
+  max-width: 160px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 18px auto; }
+
+/* ẢNH ĐẦU BÀI */
+.article-content img:first-of-type {
+  max-width: 100px; }
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .article-content {
+    font-size: 15px;
+    line-height: 1.75; }
+  .article-title {
+    font-size: 26px; }
+  .article-content h2 {
+    font-size: 21px; }
+  .article-content h3 {
+    font-size: 18px; }
+  .article-content img {
+    max-width: 220px; } }
+
+/* =========================
+   ARTICLE CARD BACKGROUND
+   (Giống Achievement)
+   ========================= */
+.article-content {
+  background: var(--card-background);
+  border-radius: 16px;
+  box-shadow: var(--shadow-l1);
+  padding: 2.5rem 2.5rem;
+  margin-top: 2rem; }
+
+/* =========================
+   ARTICLE CARD BACKGROUND
+   (Giống Achievement)
+   ========================= */
+.article-content {
+  background: var(--card-background);
+  border-radius: 16px;
+  box-shadow: var(--shadow-l1);
+  padding: 2.5rem 2.5rem;
+  margin-top: 2rem; }
+
+/* =========================
+   ARTICLE – LIGHT MODE FIX
+   ========================= */
+[data-scheme="light"] .article-content {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  /* viền xám rất nhẹ */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06); }
+
+/* chữ trong light mode đậm hơn */
+[data-scheme="light"] .article-content {
+  color: #374151; }
+
+/* heading */
+[data-scheme="light"] .article-content h2,
+[data-scheme="light"] .article-content h3 {
+  color: #111827; }
+
+/* link */
+[data-scheme="light"] .article-content a {
+  color: #2563eb; }
+
+[data-scheme="light"] .article-content a:hover {
+  color: #1d4ed8; }
+
+/* blockquote */
+[data-scheme="light"] .article-content blockquote {
+  color: #374151;
+  border-left-color: #d1d5db;
+  background: #f9fafb;
+  padding: 1rem 1.25rem;
+  border-radius: 8px; }
+
+@media (max-width: 768px) {
+  [data-scheme="light"] .article-content {
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05); } }
