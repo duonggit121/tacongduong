@@ -44,7 +44,7 @@ relativeURLs = false
 
 
 # ================= AVATAR (SIDEBAR) =================
-[params.avatar]
+[params.sidebar.avatar]
   enabled = true
   local = true
   src = "img/avatar.jpg"
