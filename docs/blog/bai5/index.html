@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="vi" dir="ltr">
-    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
+    <head><script src="/tacongduong/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=tacongduong/livereload" data-no-instant defer></script><meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="Giới thiệu\rTrong lập trình, rất nhiều khi bạn cần:\n✔ kiểm tra điều kiện\n✔ phân nhánh xử lý\n✔ chạy đoạn code khác nhau tuỳ tình huống\nKhi đó, bạn sẽ dùng if — else — switch.\nBài này sẽ giúp bạn hiểu và dùng được câu điều kiện trong Java một cách đơn giản nhất.\nif — else là gì?\rif dùng để kiểm tra điều kiện.\nNếu điều kiện đúng → chạy đoạn code bên trong.\n">
 <title>Câu điều kiện if–else &amp; switch trong Java — Hiểu là dùng được ngay</title>
 
-<link rel='canonical' href='http://localhost:1313/blog/bai5/'>
+<link rel='canonical' href='http://localhost:1313/tacongduong/blog/bai5/'>
 
-<link rel="stylesheet" href="/scss/style.min.143b637336bf0beb4d17a917245b9e67e921e8f4345a3bc837cf21cf7f08a12d.css"><meta property='og:title' content="Câu điều kiện if–else & switch trong Java — Hiểu là dùng được ngay">
+<link rel="stylesheet" href="/tacongduong/scss/style.min.143b637336bf0beb4d17a917245b9e67e921e8f4345a3bc837cf21cf7f08a12d.css"><meta property='og:title' content="Câu điều kiện if–else & switch trong Java — Hiểu là dùng được ngay">
 <meta property='og:description' content="Giới thiệu\rTrong lập trình, rất nhiều khi bạn cần:\n✔ kiểm tra điều kiện\n✔ phân nhánh xử lý\n✔ chạy đoạn code khác nhau tuỳ tình huống\nKhi đó, bạn sẽ dùng if — else — switch.\nBài này sẽ giúp bạn hiểu và dùng được câu điều kiện trong Java một cách đơn giản nhất.\nif — else là gì?\rif dùng để kiểm tra điều kiện.\nNếu điều kiện đúng → chạy đoạn code bên trong.\n">
-<meta property='og:url' content='http://localhost:1313/blog/bai5/'>
+<meta property='og:url' content='http://localhost:1313/tacongduong/blog/bai5/'>
 <meta property='og:site_name' content='Tạ Công Dương'>
 <meta property='og:type' content='article'><meta property='article:section' content='Blog' /><meta property='article:published_time' content='2025-01-05T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-01-05T00:00:00&#43;00:00'/>
 <meta name="twitter:title" content="Câu điều kiện if–else & switch trong Java — Hiểu là dùng được ngay">
 <meta name="twitter:description" content="Giới thiệu\rTrong lập trình, rất nhiều khi bạn cần:\n✔ kiểm tra điều kiện\n✔ phân nhánh xử lý\n✔ chạy đoạn code khác nhau tuỳ tình huống\nKhi đó, bạn sẽ dùng if — else — switch.\nBài này sẽ giúp bạn hiểu và dùng được câu điều kiện trong Java một cách đơn giản nhất.\nif — else là gì?\rif dùng để kiểm tra điều kiện.\nNếu điều kiện đúng → chạy đoạn code bên trong.\n">
   
    
-  <link rel="stylesheet" href="/scss/blog.min.99523269ebf82a72543dc2451aa5dc1ebf10bc5cd9846e01e1b0243e70543dfc.css">
+  <link rel="stylesheet" href="/tacongduong/scss/blog.min.99523269ebf82a72543dc2451aa5dc1ebf10bc5cd9846e01e1b0243e70543dfc.css">
 
     </head>
     <body class="">
@@ -52,13 +52,13 @@
         
             
             <figure class="site-avatar">
-                <a href="/">
+                <a href="/tacongduong/">
                 
                     
                     
                     
                         
-                        <img src="/img/avatar_hu_b5976aa1afdc1d2e.png" width="300"
+                        <img src="/tacongduong/img/avatar_hu_b5976aa1afdc1d2e.png" width="300"
                             height="300" class="site-logo" loading="lazy" alt="Avatar">
                     
                 
@@ -71,7 +71,7 @@
         
         
         <div class="site-meta">
-            <h1 class="site-name"><a href="/">Tạ Công Dương</a></h1>
+            <h1 class="site-name"><a href="/tacongduong">Tạ Công Dương</a></h1>
             <h2 class="site-description">cùng phát triển đam mê</h2>
         </div>
     </header><ol class="menu" id="main-menu">
@@ -79,7 +79,7 @@
         
         
         <li >
-            <a href='/' >
+            <a href='/tacongduong/' >
                 
                 
                 
@@ -89,7 +89,7 @@
         
         
         <li >
-            <a href='/about/' >
+            <a href='/tacongduong/about/' >
                 
                 
                 
@@ -99,7 +99,7 @@
         
         
         <li >
-            <a href='/blog/' >
+            <a href='/tacongduong/blog/' >
                 
                 
                 
@@ -109,7 +109,7 @@
         
         
         <li >
-            <a href='/achievements/' >
+            <a href='/tacongduong/achievements/' >
                 
                 
                 
@@ -315,7 +315,7 @@ if (age &gt;= 18 &amp;&amp; hasTicket) {
                 src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
                 
                 >
-            </script><script type="text/javascript" src="/ts/main.c8c8d8c035e1ac96d86ad3ba8c62af627af4c8a1b48394992a61cc0e5584db23.js" defer></script>
+            </script><script type="text/javascript" src="/tacongduong/ts/main.c8c8d8c035e1ac96d86ad3ba8c62af627af4c8a1b48394992a61cc0e5584db23.js" defer></script>
 <script>
     (function () {
         const customFont = document.createElement('link');

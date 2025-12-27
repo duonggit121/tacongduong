@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Blogs on Tạ Công Dương</title>
-        <link>http://localhost:1313/blog/</link>
+        <link>http://localhost:1313/tacongduong/blog/</link>
         <description>Recent content in Blogs on Tạ Công Dương</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>vi</language>
-        <lastBuildDate>Thu, 09 Jan 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/blog/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 09 Jan 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tacongduong/blog/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>JavaScript là gì? Cách chạy JavaScript đơn giản cho người mới</title>
-        <link>http://localhost:1313/blog/bai9/</link>
+        <link>http://localhost:1313/tacongduong/blog/bai9/</link>
         <pubDate>Thu, 09 Jan 2025 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:1313/blog/bai9/</guid>
+        <guid>http://localhost:1313/tacongduong/blog/bai9/</guid>
         <description>&lt;h2 id=&#34;giới-thiệu&#34;&gt;Giới thiệu
 &lt;/h2&gt;&lt;p&gt;Nếu Java phổ biến ở backend và Android, thì &lt;strong&gt;JavaScript&lt;/strong&gt; lại là “linh hồn của web hiện đại”.&lt;/p&gt;
 &lt;p&gt;Bạn nhìn thấy:&lt;/p&gt;
@@ -187,10 +187,10 @@ Nếu bạn muốn:&lt;/p&gt;
         </item>
         <item>
         <title>Mảng (Array) trong Java — Hiểu là dùng được ngay</title>
-        <link>http://localhost:1313/blog/bai8/</link>
+        <link>http://localhost:1313/tacongduong/blog/bai8/</link>
         <pubDate>Wed, 08 Jan 2025 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:1313/blog/bai8/</guid>
+        <guid>http://localhost:1313/tacongduong/blog/bai8/</guid>
         <description>&lt;h2 id=&#34;giới-thiệu&#34;&gt;Giới thiệu
 &lt;/h2&gt;&lt;p&gt;Trong lập trình, đôi khi bạn cần lưu &lt;strong&gt;nhiều giá trị cùng loại&lt;/strong&gt;&lt;br&gt;
 Ví dụ:&lt;/p&gt;
@@ -301,10 +301,10 @@ Ví dụ:&lt;/p&gt;
         </item>
         <item>
         <title>Mảng (Array) trong Java — Hiểu nhanh cho người mới</title>
-        <link>http://localhost:1313/blog/bai7/</link>
+        <link>http://localhost:1313/tacongduong/blog/bai7/</link>
         <pubDate>Tue, 07 Jan 2025 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:1313/blog/bai7/</guid>
+        <guid>http://localhost:1313/tacongduong/blog/bai7/</guid>
         <description>&lt;h2 id=&#34;giới-thiệu&#34;&gt;Giới thiệu
 &lt;/h2&gt;&lt;p&gt;Khi lập trình, nhiều lúc bạn cần lưu &lt;strong&gt;nhiều giá trị cùng loại&lt;/strong&gt; — ví dụ danh sách điểm, danh sách tuổi, danh sách sinh viên…&lt;/p&gt;
 &lt;p&gt;Nếu dùng từng biến riêng lẻ thì sẽ rất rối:&lt;/p&gt;
@@ -448,10 +448,10 @@ System.out.println(name);
         </item>
         <item>
         <title>Vòng lặp trong Java — for, while, do-while giải thích dễ hiểu</title>
-        <link>http://localhost:1313/blog/bai6/</link>
+        <link>http://localhost:1313/tacongduong/blog/bai6/</link>
         <pubDate>Mon, 06 Jan 2025 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:1313/blog/bai6/</guid>
+        <guid>http://localhost:1313/tacongduong/blog/bai6/</guid>
         <description>&lt;h2 id=&#34;giới-thiệu&#34;&gt;Giới thiệu
 &lt;/h2&gt;&lt;p&gt;Trong lập trình, sẽ có lúc bạn cần &lt;strong&gt;lặp đi lặp lại một công việc&lt;/strong&gt; — ví dụ:&lt;/p&gt;
 &lt;p&gt;✔ In 10 lần câu “Xin chào”&lt;br&gt;
@@ -570,10 +570,10 @@ System.out.println(&amp;#34;Tổng = &amp;#34; + sum);
         </item>
         <item>
         <title>Câu điều kiện if–else &amp; switch trong Java — Hiểu là dùng được ngay</title>
-        <link>http://localhost:1313/blog/bai5/</link>
+        <link>http://localhost:1313/tacongduong/blog/bai5/</link>
         <pubDate>Sun, 05 Jan 2025 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:1313/blog/bai5/</guid>
+        <guid>http://localhost:1313/tacongduong/blog/bai5/</guid>
         <description>&lt;h2 id=&#34;giới-thiệu&#34;&gt;Giới thiệu
 &lt;/h2&gt;&lt;p&gt;Trong lập trình, rất nhiều khi bạn cần:&lt;/p&gt;
 &lt;p&gt;✔ kiểm tra điều kiện&lt;br&gt;
@@ -719,10 +719,10 @@ if (age &amp;gt;= 18 &amp;amp;&amp;amp; hasTicket) {
         </item>
         <item>
         <title>Biến, kiểu dữ liệu &amp; toán tử trong Java — Nền tảng cho người mới</title>
-        <link>http://localhost:1313/blog/bai4/</link>
+        <link>http://localhost:1313/tacongduong/blog/bai4/</link>
         <pubDate>Sat, 04 Jan 2025 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:1313/blog/bai4/</guid>
+        <guid>http://localhost:1313/tacongduong/blog/bai4/</guid>
         <description>&lt;h2 id=&#34;giới-thiệu&#34;&gt;Giới thiệu
 &lt;/h2&gt;&lt;p&gt;Sau khi bạn đã cài đặt Java và chạy được chương trình đầu tiên, bước tiếp theo rất quan trọng là:&lt;/p&gt;
 &lt;blockquote&gt;
@@ -845,10 +845,10 @@ int y = (int) x;   // y = 9
         </item>
         <item>
         <title>Cài đặt Java &amp; viết chương trình đầu tiên — Hướng dẫn cho người mới</title>
-        <link>http://localhost:1313/blog/bai3/</link>
+        <link>http://localhost:1313/tacongduong/blog/bai3/</link>
         <pubDate>Fri, 03 Jan 2025 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:1313/blog/bai3/</guid>
+        <guid>http://localhost:1313/tacongduong/blog/bai3/</guid>
         <description>&lt;p&gt;&lt;img src=&#34;https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg&#34;
 	
 	
@@ -945,10 +945,10 @@ java Hello
         </item>
         <item>
         <title>Java vs JavaScript — Khác nhau ở điểm nào?</title>
-        <link>http://localhost:1313/blog/bai2/</link>
+        <link>http://localhost:1313/tacongduong/blog/bai2/</link>
         <pubDate>Thu, 02 Jan 2025 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:1313/blog/bai2/</guid>
+        <guid>http://localhost:1313/tacongduong/blog/bai2/</guid>
         <description>&lt;p&gt;&lt;img src=&#34;https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png&#34;
 	
 	
@@ -1060,10 +1060,10 @@ car ≠ carpet 😆&lt;/p&gt;
         </item>
         <item>
         <title>Java là gì? Vì sao Java vẫn được dùng rộng rãi đến ngày nay</title>
-        <link>http://localhost:1313/blog/bai1/</link>
+        <link>http://localhost:1313/tacongduong/blog/bai1/</link>
         <pubDate>Wed, 01 Jan 2025 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:1313/blog/bai1/</guid>
+        <guid>http://localhost:1313/tacongduong/blog/bai1/</guid>
         <description>&lt;p&gt;&lt;img src=&#34;https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg&#34;
 	
 	
