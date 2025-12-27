@@ -2,8 +2,6 @@ theme = "hugo-theme-stack"
 baseURL = "https://tacongduong.github.io/"
 languageCode = "vi"
 title = "Tạ Công Dương"
-
-theme = "hugo-theme-stack"
 publishDir = "docs"
 # ================= MENU =================
 [menu]
