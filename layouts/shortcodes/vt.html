@@ -1,0 +1,65 @@
+{{ $scss := resources.Get "scss/about.scss" | toCSS | minify }}
+<link rel="stylesheet" href="{{ $scss.RelPermalink }}">
+<div class="article-content about-page">
+
+  <!-- HERO -->
+
+  <!-- NỘI DUNG GIỚI THIỆU -->
+  <section class="about-list">
+<div class="about-hero">
+    <img src="/img/avatar2.jpg" alt="Avatar Tạ Công Dương" class="about-avatar">
+    <article class="about-item">
+      <h2>Thông tin cá nhân</h2>
+      <p>
+        Xin chào!<br>
+        Mình là <strong>Tạ Công Dương</strong>, 21 tuổi, hiện đang là
+        <strong>sinh viên năm 4 ngành Hệ thống Thông tin</strong> tại
+        <strong>Trường Đại học Công nghệ TP.HCM (HUTECH)</strong>.
+      </p>
+    </article>
+
+    <article class="about-item">
+      <h2>Định hướng & Sở thích</h2>
+      <p>
+  Trong quá trình học tập và rèn luyện tại trường, mình đặc biệt quan tâm đến
+  <strong>lập trình</strong>, nhất là các nội dung liên quan đến
+  <strong>lập trình mạng</strong>, <strong>Java</strong> và
+  <strong>JavaScript</strong>.
+  Thông qua các môn học và đồ án, mình đã có cơ hội tiếp cận với việc:
+</p>
+      <p>
+        Thông qua các môn học và đồ án, mình đã có cơ hội:
+      </p>
+      <ul>
+        <li>Xây dựng ứng dụng</li>
+        <li>Xử lý dữ liệu</li>
+        <li>Phát triển các chức năng cơ bản cho hệ thống web</li>
+      </ul>
+    </article>
+
+    <article class="about-item">
+      <h2>Mục đích xây dựng Blog</h2>
+      <ul>
+        <li>Giới thiệu <strong>profile cá nhân</strong></li>
+        <li>Chia sẻ kiến thức và trải nghiệm học tập về <strong>Java & JavaScript</strong></li>
+        <li>
+          Tổng hợp bài viết theo từng <strong>khóa học đã học</strong>,
+          phục vụ <strong>đồ án học phần</strong> và quá trình <strong>tự học</strong>
+        </li>
+      </ul>
+    </article>
+
+    <article class="about-item">
+      <h2>Lời kết</h2>
+      <p>
+        Hy vọng blog sẽ hữu ích cho các bạn sinh viên đang học hoặc quan tâm đến
+        lĩnh vực <strong>lập trình</strong> và <strong>công nghệ thông tin</strong>.
+      </p>
+      <p>
+        Cảm ơn bạn đã ghé thăm blog của mình! 😊
+      </p>
+    </article>
+
+  </section>
+
+</div>

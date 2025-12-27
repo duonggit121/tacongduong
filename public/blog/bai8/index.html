@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="vi" dir="ltr">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="Giới thiệu\rTrong lập trình, đôi khi bạn cần lưu nhiều giá trị cùng loại\nVí dụ:\n✔ danh sách điểm\n✔ danh sách tên sinh viên\n✔ danh sách số điện thoại\nNếu dùng biến riêng lẻ:\nint a = 5; int b = 7; int c = 9; 👉 Rất bất tiện!\nVì vậy Java cung cấp Array (Mảng).\nMảng là gì?\rMảng là một tập hợp nhiều phần tử có cùng kiểu dữ liệu.\n">
+<title>Mảng (Array) trong Java — Hiểu là dùng được ngay</title>
+
+<link rel='canonical' href='http://localhost:1313/blog/bai8/'>
+
+<link rel="stylesheet" href="/scss/style.min.143b637336bf0beb4d17a917245b9e67e921e8f4345a3bc837cf21cf7f08a12d.css"><meta property='og:title' content="Mảng (Array) trong Java — Hiểu là dùng được ngay">
+<meta property='og:description' content="Giới thiệu\rTrong lập trình, đôi khi bạn cần lưu nhiều giá trị cùng loại\nVí dụ:\n✔ danh sách điểm\n✔ danh sách tên sinh viên\n✔ danh sách số điện thoại\nNếu dùng biến riêng lẻ:\nint a = 5; int b = 7; int c = 9; 👉 Rất bất tiện!\nVì vậy Java cung cấp Array (Mảng).\nMảng là gì?\rMảng là một tập hợp nhiều phần tử có cùng kiểu dữ liệu.\n">
+<meta property='og:url' content='http://localhost:1313/blog/bai8/'>
+<meta property='og:site_name' content='Tạ Công Dương'>
+<meta property='og:type' content='article'><meta property='article:section' content='Blog' /><meta property='article:published_time' content='2025-01-08T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-01-08T00:00:00&#43;00:00'/>
+<meta name="twitter:title" content="Mảng (Array) trong Java — Hiểu là dùng được ngay">
+<meta name="twitter:description" content="Giới thiệu\rTrong lập trình, đôi khi bạn cần lưu nhiều giá trị cùng loại\nVí dụ:\n✔ danh sách điểm\n✔ danh sách tên sinh viên\n✔ danh sách số điện thoại\nNếu dùng biến riêng lẻ:\nint a = 5; int b = 7; int c = 9; 👉 Rất bất tiện!\nVì vậy Java cung cấp Array (Mảng).\nMảng là gì?\rMảng là một tập hợp nhiều phần tử có cùng kiểu dữ liệu.\n">
+  
+   
+  <link rel="stylesheet" href="/scss/blog.min.99523269ebf82a72543dc2451aa5dc1ebf10bc5cd9846e01e1b0243e70543dfc.css">
+
+    </head>
+    <body class="">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column compact"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Hiển thị Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu_b5976aa1afdc1d2e.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">👨‍💻</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Tạ Công Dương</a></h1>
+            <h2 class="site-description">cùng phát triển đam mê</h2>
+        </div>
+    </header><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                <span>Trang chủ</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/about/' >
+                
+                
+                
+                <span>Giới thiệu</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/blog/' >
+                
+                
+                
+                <span>Blog</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/achievements/' >
+                
+                
+                
+                <span>Thành tựu</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>Chế độ nền tối</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+            <main class="main full-width">
+
+<article class="article-content">
+
+  
+  <h1 class="article-title">
+    Mảng (Array) trong Java — Hiểu là dùng được ngay
+  </h1>
+
+  
+  
+    <p class="article-date">
+      08/01/2025
+    </p>
+  
+
+  
+  <h2 id="giới-thiệu">Giới thiệu
+</h2><p>Trong lập trình, đôi khi bạn cần lưu <strong>nhiều giá trị cùng loại</strong><br>
+Ví dụ:</p>
+<p>✔ danh sách điểm<br>
+✔ danh sách tên sinh viên<br>
+✔ danh sách số điện thoại</p>
+<p>Nếu dùng biến riêng lẻ:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> a <span style="color:#f92672">=</span> 5;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> b <span style="color:#f92672">=</span> 7;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> c <span style="color:#f92672">=</span> 9;
+</span></span></code></pre></div><p>👉 Rất bất tiện!</p>
+<p>Vì vậy Java cung cấp <strong>Array (Mảng)</strong>.</p>
+<hr>
+<h2 id="mảng-là-gì">Mảng là gì?
+</h2><p><strong>Mảng là một tập hợp nhiều phần tử có cùng kiểu dữ liệu.</strong></p>
+<p>Ví dụ:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> numbers <span style="color:#f92672">=</span> {1, 2, 3, 4, 5};
+</span></span></code></pre></div><p>Ở đây:</p>
+<p>✔ <code>int</code> → kiểu dữ liệu<br>
+✔ <code>[]</code> → đánh dấu mảng<br>
+✔ <code>{1,2,3,4,5}</code> → danh sách giá trị</p>
+<hr>
+<h2 id="khai-báo-mảng-trong-java">Khai báo mảng trong Java
+</h2><p>Có 2 cách phổ biến:</p>
+<h3 id="-cách-1--khai-báo--gán-giá-trị-luôn">🔹 Cách 1 — Khai báo &amp; gán giá trị luôn
+</h3><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>String<span style="color:#f92672">[]</span> names <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#34;An&#34;</span>, <span style="color:#e6db74">&#34;Bình&#34;</span>, <span style="color:#e6db74">&#34;Chi&#34;</span>};
+</span></span></code></pre></div><h3 id="-cách-2--khai-báo-trước-gán-sau">🔹 Cách 2 — Khai báo trước, gán sau
+</h3><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> a <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[</span>3<span style="color:#f92672">]</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>a<span style="color:#f92672">[</span>0<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> 10;
+</span></span><span style="display:flex;"><span>a<span style="color:#f92672">[</span>1<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> 20;
+</span></span><span style="display:flex;"><span>a<span style="color:#f92672">[</span>2<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> 30;
+</span></span></code></pre></div><p>👉 <code>new int[3]</code> nghĩa là mảng có <strong>3 phần tử</strong></p>
+<hr>
+<h2 id="truy-cập-phần-tử-mảng">Truy cập phần tử mảng
+</h2><p>Chỉ số (index) trong Java:</p>
+<p>🟣 Bắt đầu từ <strong>0</strong></p>
+<p>Ví dụ:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> nums <span style="color:#f92672">=</span> {5, 10, 15};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(nums<span style="color:#f92672">[</span>0<span style="color:#f92672">]</span>); <span style="color:#75715e">// 5</span>
+</span></span><span style="display:flex;"><span>System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(nums<span style="color:#f92672">[</span>1<span style="color:#f92672">]</span>); <span style="color:#75715e">// 10</span>
+</span></span><span style="display:flex;"><span>System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(nums<span style="color:#f92672">[</span>2<span style="color:#f92672">]</span>); <span style="color:#75715e">// 15</span>
+</span></span></code></pre></div><p>❌ Nếu truy cập sai index:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>nums<span style="color:#f92672">[</span>3<span style="color:#f92672">]</span>;
+</span></span></code></pre></div><p>👉 Sẽ bị lỗi <strong>ArrayIndexOutOfBoundsException</strong></p>
+<hr>
+<h2 id="duyệt-mảng-bằng-vòng-lặp">Duyệt mảng bằng vòng lặp
+</h2><h3 id="-for-thường">🔹 for thường
+</h3><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> a <span style="color:#f92672">=</span> {1, 2, 3};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0; i <span style="color:#f92672">&lt;</span> a.<span style="color:#a6e22e">length</span>; i<span style="color:#f92672">++</span>) {
+</span></span><span style="display:flex;"><span>    System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(a<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="-foreach-ngắn-gọn-hơn">🔹 for–each (ngắn gọn hơn)
+</h3><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> value : a) {
+</span></span><span style="display:flex;"><span>    System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(value);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><hr>
+<h2 id="độ-dài-mảng">Độ dài mảng
+</h2><p>Dùng thuộc tính:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>a.<span style="color:#a6e22e">length</span>
+</span></span></code></pre></div><p>Ví dụ:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(a.<span style="color:#a6e22e">length</span>);
+</span></span></code></pre></div><hr>
+<h2 id="mảng-chỉ-có-kích-thước-cố-định">Mảng chỉ có kích thước cố định
+</h2><p>Sau khi tạo:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> arr <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[</span>5<span style="color:#f92672">]</span>;
+</span></span></code></pre></div><p>👉 bạn <strong>không thể tăng/giảm số phần tử</strong></p>
+<p>Nếu cần linh hoạt → dùng:</p>
+<p>✔ <code>ArrayList</code> (sẽ học ở phần sau)</p>
+<hr>
+<h2 id="tổng-kết-nhanh">Tổng kết nhanh
+</h2><table>
+  <thead>
+      <tr>
+          <th>Khái niệm</th>
+          <th>Ý nghĩa</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Mảng</td>
+          <td>Chứa nhiều giá trị cùng kiểu</td>
+      </tr>
+      <tr>
+          <td>Index</td>
+          <td>Bắt đầu từ 0</td>
+      </tr>
+      <tr>
+          <td>length</td>
+          <td>Độ dài mảng</td>
+      </tr>
+      <tr>
+          <td>Kích thước</td>
+          <td>Cố định sau khi tạo</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="kết-luận">Kết luận
+</h2><p>Mảng là nền tảng quan trọng trong Java giúp bạn:</p>
+<p>✔ Lưu trữ dữ liệu nhiều phần tử<br>
+✔ Duyệt dữ liệu bằng vòng lặp<br>
+✔ Xử lý danh sách hiệu quả</p>
+<p>👉 Hiểu vững mảng = Bạn đã tiến thêm 1 bước lớn trong Java 🚀</p>
+
+
+</article>
+
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.c8c8d8c035e1ac96d86ad3ba8c62af627af4c8a1b48394992a61cc0e5584db23.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

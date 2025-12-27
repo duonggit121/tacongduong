@@ -1,0 +1,135 @@
+/* ===== HERO SECTION (STACK SAFE) ===== */
+.home-hero {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  margin-top: 20px;
+
+  /* ===== TOP ===== */
+  .hero-top {
+    display: flex;
+    align-items: center;
+    gap: 72px;
+  }
+
+  .hero-image {
+    width: 320px;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 16px;
+    box-shadow: var(--shadow-l2);
+  }
+
+  .hero-intro {
+    max-width: 700px;
+
+    .hello {
+      font-size: 22px;
+      font-weight: 500;
+      color: var(--body-text-color);
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      font-size: 46px;
+      font-weight: 800;
+      line-height: 1.2;
+      color: var(--accent-color);
+      margin-bottom: 18px;
+    }
+
+    .intro-text {
+      font-size: 20px;
+      line-height: 1.75;
+      color: var(--body-text-color);
+    }
+  }
+
+  /* ===== BOTTOM ===== */
+  .hero-bottom {
+    text-align: center;
+
+    .main-slogan {
+      font-size: 30px;
+      font-weight: 600;
+      color: var(--accent-color);
+      margin-bottom: 36px;
+    }
+
+    /* ===== SOCIAL ICONS (SAFE) ===== */
+    .social-apps {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+
+      /* giống achievement: dùng biến Stack */
+      --social-icon-color: var(--accent-color);
+
+      a.app {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 52px;
+        height: 52px;
+        border-radius: 14px;
+
+        color: var(--social-icon-color);
+        background: var(--card-background);
+
+        box-shadow: var(--shadow-l1);
+        transition: transform .25s ease, box-shadow .25s ease;
+
+        &:hover {
+          transform: translateY(-4px) scale(1.05);
+          box-shadow: var(--shadow-l2);
+        }
+
+        svg {
+          width: 22px;
+          height: 22px;
+          display: block;
+          fill: currentColor;
+        }
+      }
+
+      /* BRAND COLORS */
+      .gmail { background: #ea4335; }
+      .github { background: #24292f; }
+      .twitter { background: #000; }
+      .instagram {
+        background: linear-gradient(
+          135deg,
+          #f58529,
+          #dd2a7b,
+          #8134af,
+          #515bd4
+        );
+      }
+    }
+  }
+
+  /* ===== MOBILE ===== */
+  @media (max-width: 768px) {
+    .hero-top {
+      flex-direction: column;
+      text-align: center;
+      gap: 32px;
+    }
+
+    .hero-image {
+      width: 240px;
+      height: 240px;
+    }
+
+    .hero-intro {
+      h1 { font-size: 34px; }
+      .intro-text { font-size: 18px; }
+    }
+
+    .hero-bottom .main-slogan {
+      font-size: 24px;
+    }
+  }
+}

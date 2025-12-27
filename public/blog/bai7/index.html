@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="vi" dir="ltr">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="Giới thiệu\rKhi lập trình, nhiều lúc bạn cần lưu nhiều giá trị cùng loại — ví dụ danh sách điểm, danh sách tuổi, danh sách sinh viên…\nNếu dùng từng biến riêng lẻ thì sẽ rất rối:\nint a = 5;\rint b = 7;\rint c = 9; 👉 Lúc này mảng (Array) ra đời để giúp bạn lưu trữ dữ liệu một cách gọn gàng.\nMảng trong Java là gì?\rMảng là một tập hợp các phần tử cùng kiểu dữ liệu, được lưu liên tiếp trong bộ nhớ.\n">
+<title>Mảng (Array) trong Java — Hiểu nhanh cho người mới</title>
+
+<link rel='canonical' href='http://localhost:1313/blog/bai7/'>
+
+<link rel="stylesheet" href="/scss/style.min.143b637336bf0beb4d17a917245b9e67e921e8f4345a3bc837cf21cf7f08a12d.css"><meta property='og:title' content="Mảng (Array) trong Java — Hiểu nhanh cho người mới">
+<meta property='og:description' content="Giới thiệu\rKhi lập trình, nhiều lúc bạn cần lưu nhiều giá trị cùng loại — ví dụ danh sách điểm, danh sách tuổi, danh sách sinh viên…\nNếu dùng từng biến riêng lẻ thì sẽ rất rối:\nint a = 5;\rint b = 7;\rint c = 9; 👉 Lúc này mảng (Array) ra đời để giúp bạn lưu trữ dữ liệu một cách gọn gàng.\nMảng trong Java là gì?\rMảng là một tập hợp các phần tử cùng kiểu dữ liệu, được lưu liên tiếp trong bộ nhớ.\n">
+<meta property='og:url' content='http://localhost:1313/blog/bai7/'>
+<meta property='og:site_name' content='Tạ Công Dương'>
+<meta property='og:type' content='article'><meta property='article:section' content='Blog' /><meta property='article:published_time' content='2025-01-07T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-01-07T00:00:00&#43;00:00'/>
+<meta name="twitter:title" content="Mảng (Array) trong Java — Hiểu nhanh cho người mới">
+<meta name="twitter:description" content="Giới thiệu\rKhi lập trình, nhiều lúc bạn cần lưu nhiều giá trị cùng loại — ví dụ danh sách điểm, danh sách tuổi, danh sách sinh viên…\nNếu dùng từng biến riêng lẻ thì sẽ rất rối:\nint a = 5;\rint b = 7;\rint c = 9; 👉 Lúc này mảng (Array) ra đời để giúp bạn lưu trữ dữ liệu một cách gọn gàng.\nMảng trong Java là gì?\rMảng là một tập hợp các phần tử cùng kiểu dữ liệu, được lưu liên tiếp trong bộ nhớ.\n">
+  
+   
+  <link rel="stylesheet" href="/scss/blog.min.99523269ebf82a72543dc2451aa5dc1ebf10bc5cd9846e01e1b0243e70543dfc.css">
+
+    </head>
+    <body class="">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column compact"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Hiển thị Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu_b5976aa1afdc1d2e.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">👨‍💻</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Tạ Công Dương</a></h1>
+            <h2 class="site-description">cùng phát triển đam mê</h2>
+        </div>
+    </header><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                <span>Trang chủ</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/about/' >
+                
+                
+                
+                <span>Giới thiệu</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/blog/' >
+                
+                
+                
+                <span>Blog</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/achievements/' >
+                
+                
+                
+                <span>Thành tựu</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>Chế độ nền tối</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+            <main class="main full-width">
+
+<article class="article-content">
+
+  
+  <h1 class="article-title">
+    Mảng (Array) trong Java — Hiểu nhanh cho người mới
+  </h1>
+
+  
+  
+    <p class="article-date">
+      07/01/2025
+    </p>
+  
+
+  
+  <h2 id="giới-thiệu">Giới thiệu
+</h2><p>Khi lập trình, nhiều lúc bạn cần lưu <strong>nhiều giá trị cùng loại</strong> — ví dụ danh sách điểm, danh sách tuổi, danh sách sinh viên…</p>
+<p>Nếu dùng từng biến riêng lẻ thì sẽ rất rối:</p>
+<pre tabindex="0"><code>int a = 5;
+int b = 7;
+int c = 9;
+</code></pre><p>👉 Lúc này <strong>mảng (Array)</strong> ra đời để giúp bạn lưu trữ dữ liệu một cách gọn gàng.</p>
+<hr>
+<h2 id="mảng-trong-java-là-gì">Mảng trong Java là gì?
+</h2><p><strong>Mảng là một tập hợp các phần tử cùng kiểu dữ liệu, được lưu liên tiếp trong bộ nhớ.</strong></p>
+<p>Ví dụ mảng số nguyên:</p>
+<pre tabindex="0"><code>int[] numbers = {1, 2, 3, 4, 5};
+</code></pre><p>Trong đó:</p>
+<table>
+  <thead>
+      <tr>
+          <th>Thành phần</th>
+          <th>Ý nghĩa</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>int</td>
+          <td>kiểu dữ liệu</td>
+      </tr>
+      <tr>
+          <td>[]</td>
+          <td>khai báo mảng</td>
+      </tr>
+      <tr>
+          <td>numbers</td>
+          <td>tên mảng</td>
+      </tr>
+      <tr>
+          <td>{1,2,3,4,5}</td>
+          <td>giá trị trong mảng</td>
+      </tr>
+  </tbody>
+</table>
+<p>📌 Lưu ý:<br>
+👉 Các phần tử trong mảng <strong>được đánh số từ 0</strong></p>
+<table>
+  <thead>
+      <tr>
+          <th>Vị trí (index)</th>
+          <th>Giá trị</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>0</td>
+          <td>1</td>
+      </tr>
+      <tr>
+          <td>1</td>
+          <td>2</td>
+      </tr>
+      <tr>
+          <td>2</td>
+          <td>3</td>
+      </tr>
+      <tr>
+          <td>3</td>
+          <td>4</td>
+      </tr>
+      <tr>
+          <td>4</td>
+          <td>5</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="khai-báo-mảng-trong-java">Khai báo mảng trong Java
+</h2><p>Có 2 cách phổ biến:</p>
+<h3 id="-cách-1--khai-báo--gán-luôn-giá-trị">🟢 Cách 1 — Khai báo &amp; gán luôn giá trị
+</h3><pre tabindex="0"><code>int[] numbers = {10, 20, 30};
+</code></pre><h3 id="-cách-2--khai-báo-trước-gán-sau">🟣 Cách 2 — Khai báo trước, gán sau
+</h3><pre tabindex="0"><code>int[] numbers = new int[3];
+numbers[0] = 10;
+numbers[1] = 20;
+numbers[2] = 30;
+</code></pre><p>👉 <code>new int[3]</code> nghĩa là mảng có <strong>3 phần tử</strong></p>
+<hr>
+<h2 id="truy-cập-phần-tử-trong-mảng">Truy cập phần tử trong mảng
+</h2><p>Bạn dùng <strong>index (chỉ số)</strong>:</p>
+<pre tabindex="0"><code>System.out.println(numbers[0]); // in phần tử đầu
+System.out.println(numbers[2]); // in phần tử thứ 3
+</code></pre><p>⚠️ Nếu truy cập sai index:</p>
+<pre tabindex="0"><code>numbers[10];
+</code></pre><p>Java sẽ báo lỗi <strong>ArrayIndexOutOfBoundsException</strong></p>
+<hr>
+<h2 id="duyệt-mảng-bằng-vòng-lặp">Duyệt mảng bằng vòng lặp
+</h2><h3 id="-for">🔁 for
+</h3><pre tabindex="0"><code>for (int i = 0; i &lt; numbers.length; i++) {
+System.out.println(numbers[i]);
+}
+</code></pre><p>📌 <code>numbers.length</code> = số phần tử mảng</p>
+<hr>
+<h3 id="-foreach-cách-viết-gọn-hơn">🔁 for–each (cách viết gọn hơn)
+</h3><pre tabindex="0"><code>for (int n : numbers) {
+System.out.println(n);
+}
+</code></pre><p>👉 Cách này dễ đọc — rất hay dùng!</p>
+<hr>
+<h2 id="mảng-string">Mảng String
+</h2><p>Không chỉ số nhé 😄<br>
+Bạn có thể tạo mảng chuỗi:</p>
+<pre tabindex="0"><code>String[] names = {&#34;An&#34;, &#34;Bình&#34;, &#34;Lan&#34;};
+</code></pre><p>Duyệt:</p>
+<pre tabindex="0"><code>for (String name : names) {
+System.out.println(name);
+}
+</code></pre><hr>
+<h2 id="khi-nào-nên-dùng-mảng">Khi nào nên dùng mảng?
+</h2><p>✔ Khi số phần tử <strong>biết trước</strong><br>
+✔ Khi các phần tử <strong>cùng kiểu dữ liệu</strong><br>
+✔ Khi cần lưu trữ cố định</p>
+<p>Ví dụ phù hợp:</p>
+<p>🟢 Danh sách điểm của 1 lớp<br>
+🟢 Danh sách số nguyên tử trong bảng tuần hoàn<br>
+🟢 Danh sách ngày trong tuần</p>
+<hr>
+<h2 id="hạn-chế-của-mảng">Hạn chế của mảng
+</h2><p>❌ Kích thước <strong>không thay đổi được sau khi tạo</strong></p>
+<p>Muốn linh hoạt hơn → sau này bạn sẽ học:</p>
+<p>✔ <code>ArrayList</code><br>
+✔ <code>List</code><br>
+✔ <code>Map</code><br>
+✔ <code>Set</code></p>
+<hr>
+<h2 id="kết-luận">Kết luận
+</h2><p>Trong bài này bạn đã hiểu:</p>
+<p>✔ Mảng là gì</p>
+<p>✔ Cách khai báo &amp; truy cập phần tử</p>
+<p>✔ Duyệt mảng bằng for &amp; for–each</p>
+<p>✔ Mảng nhiều chiều</p>
+<p>✔ Khi nào nên dùng mảng</p>
+<p>👉 Đây là bước quan trọng trước khi qua <strong>Collection &amp; OOP nâng cao</strong>.</p>
+<hr>
+
+
+</article>
+
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.c8c8d8c035e1ac96d86ad3ba8c62af627af4c8a1b48394992a61cc0e5584db23.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

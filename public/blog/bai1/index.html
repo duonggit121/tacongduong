@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="vi" dir="ltr">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="\nGiới thiệu\rKhi bắt đầu tìm hiểu về lập trình, rất nhiều người nghe đến cái tên Java.\nDù đã xuất hiện từ rất lâu, Java vẫn được sử dụng rộng rãi trong các hệ thống lớn, ngân hàng, doanh nghiệp và các nền tảng backend hiện đại.\nVậy Java là gì?\nVì sao sau gần 30 năm, Java vẫn giữ được vị thế của mình trong ngành phần mềm?\n">
+<title>Java là gì? Vì sao Java vẫn được dùng rộng rãi đến ngày nay</title>
+
+<link rel='canonical' href='http://localhost:1313/blog/bai1/'>
+
+<link rel="stylesheet" href="/scss/style.min.143b637336bf0beb4d17a917245b9e67e921e8f4345a3bc837cf21cf7f08a12d.css"><meta property='og:title' content="Java là gì? Vì sao Java vẫn được dùng rộng rãi đến ngày nay">
+<meta property='og:description' content="\nGiới thiệu\rKhi bắt đầu tìm hiểu về lập trình, rất nhiều người nghe đến cái tên Java.\nDù đã xuất hiện từ rất lâu, Java vẫn được sử dụng rộng rãi trong các hệ thống lớn, ngân hàng, doanh nghiệp và các nền tảng backend hiện đại.\nVậy Java là gì?\nVì sao sau gần 30 năm, Java vẫn giữ được vị thế của mình trong ngành phần mềm?\n">
+<meta property='og:url' content='http://localhost:1313/blog/bai1/'>
+<meta property='og:site_name' content='Tạ Công Dương'>
+<meta property='og:type' content='article'><meta property='article:section' content='Blog' /><meta property='article:published_time' content='2025-01-01T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-01-01T00:00:00&#43;00:00'/>
+<meta name="twitter:title" content="Java là gì? Vì sao Java vẫn được dùng rộng rãi đến ngày nay">
+<meta name="twitter:description" content="\nGiới thiệu\rKhi bắt đầu tìm hiểu về lập trình, rất nhiều người nghe đến cái tên Java.\nDù đã xuất hiện từ rất lâu, Java vẫn được sử dụng rộng rãi trong các hệ thống lớn, ngân hàng, doanh nghiệp và các nền tảng backend hiện đại.\nVậy Java là gì?\nVì sao sau gần 30 năm, Java vẫn giữ được vị thế của mình trong ngành phần mềm?\n">
+  
+   
+  <link rel="stylesheet" href="/scss/blog.min.99523269ebf82a72543dc2451aa5dc1ebf10bc5cd9846e01e1b0243e70543dfc.css">
+
+    </head>
+    <body class="">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column compact"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Hiển thị Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu_b5976aa1afdc1d2e.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">👨‍💻</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Tạ Công Dương</a></h1>
+            <h2 class="site-description">cùng phát triển đam mê</h2>
+        </div>
+    </header><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                <span>Trang chủ</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/about/' >
+                
+                
+                
+                <span>Giới thiệu</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/blog/' >
+                
+                
+                
+                <span>Blog</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/achievements/' >
+                
+                
+                
+                <span>Thành tựu</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>Chế độ nền tối</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+            <main class="main full-width">
+
+<article class="article-content">
+
+  
+  <h1 class="article-title">
+    Java là gì? Vì sao Java vẫn được dùng rộng rãi đến ngày nay
+  </h1>
+
+  
+  
+    <p class="article-date">
+      01/01/2025
+    </p>
+  
+
+  
+  <p><img src="https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg"
+	
+	
+	
+	loading="lazy"
+	
+		alt="Java programming"
+	
+	
+></p>
+<h2 id="giới-thiệu">Giới thiệu
+</h2><p>Khi bắt đầu tìm hiểu về lập trình, rất nhiều người nghe đến cái tên <strong>Java</strong>.<br>
+Dù đã xuất hiện từ rất lâu, Java vẫn được sử dụng rộng rãi trong các hệ thống lớn, ngân hàng, doanh nghiệp và các nền tảng backend hiện đại.</p>
+<p>Vậy <strong>Java là gì?</strong><br>
+Vì sao sau gần 30 năm, Java vẫn giữ được vị thế của mình trong ngành phần mềm?</p>
+<p>Bài viết này sẽ giúp bạn hiểu Java một cách <strong>đơn giản, dễ tiếp cận</strong>, đặc biệt phù hợp với người mới.</p>
+<hr>
+<h2 id="java-là-gì">Java là gì?
+</h2><p><strong>Java</strong> là một ngôn ngữ lập trình hướng đối tượng, được phát triển bởi <strong>Sun Microsystems</strong> và ra mắt lần đầu vào năm <strong>1995</strong>.<br>
+Hiện nay Java được duy trì và phát triển bởi <strong>Oracle</strong>.</p>
+<p>Ngay từ đầu, Java được thiết kế với mục tiêu:</p>
+<ul>
+<li>Dễ học</li>
+<li>Ổn định</li>
+<li>Chạy được trên nhiều hệ điều hành</li>
+</ul>
+<p>Triết lý nổi tiếng của Java là:</p>
+<blockquote>
+<p><strong>Write once, run anywhere</strong><br>
+<em>(Viết một lần, chạy ở mọi nơi)</em></p>
+</blockquote>
+<hr>
+<h2 id="java-chạy-được-trên-nhiều-hệ-điều-hành-như-thế-nào">Java chạy được trên nhiều hệ điều hành như thế nào?
+</h2><p>Khác với C hoặc C++, Java <strong>không biên dịch trực tiếp sang mã máy</strong>.<br>
+Thay vào đó, Java sử dụng <strong>Java Virtual Machine (JVM)</strong>.</p>
+<p>Quy trình hoạt động:</p>
+<p>Mã nguồn (.java)<br>
+↓<br>
+Trình biên dịch Java<br>
+↓<br>
+Bytecode (.class)<br>
+↓<br>
+Java Virtual Machine (JVM)<br>
+↓<br>
+Hệ điều hành</p>
+<p>Chỉ cần máy tính có <strong>JVM</strong>, chương trình Java có thể chạy mà không cần chỉnh sửa mã nguồn.</p>
+<p>👉 Đây là lý do Java được dùng rất nhiều trong các hệ thống lớn.</p>
+<hr>
+<h2 id="java-có-khó-học-không">Java có khó học không?
+</h2><p>Câu trả lời là: <strong>không quá khó</strong>, đặc biệt nếu bạn học bài bản.</p>
+<p>Java:</p>
+<ul>
+<li>Có cú pháp rõ ràng</li>
+<li>Chặt chẽ về kiểu dữ liệu</li>
+<li>Ép bạn viết code có cấu trúc</li>
+</ul>
+<p>Chính vì vậy, Java thường được dùng để <strong>dạy lập trình cơ bản và tư duy OOP</strong>.</p>
+<hr>
+<h2 id="lập-trình-hướng-đối-tượng-trong-java">Lập trình hướng đối tượng trong Java
+</h2><p>Java là một ngôn ngữ <strong>hướng đối tượng</strong> (Object-Oriented Programming – OOP).</p>
+<p>Các khái niệm quan trọng gồm:</p>
+<ul>
+<li><strong>Class</strong> (lớp)</li>
+<li><strong>Object</strong> (đối tượng)</li>
+<li><strong>Kế thừa</strong></li>
+<li><strong>Đa hình</strong></li>
+<li><strong>Đóng gói</strong></li>
+</ul>
+<p>Ví dụ đơn giản:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Student</span> {
+</span></span><span style="display:flex;"><span>    String name;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> age;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">sayHello</span>() {
+</span></span><span style="display:flex;"><span>        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Xin chào, tôi là &#34;</span> <span style="color:#f92672">+</span> name);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="kết-luận">Kết luận
+</h2><p>Java là một trong những ngôn ngữ lập trình ổn định, mạnh mẽ và bền bỉ nhất cho đến hôm nay.
+Nếu bạn muốn theo đuổi:</p>
+<p>✔ Backend</p>
+<p>✔ Android</p>
+<p>✔ Doanh nghiệp / ngân hàng</p>
+<p>thì Java là lựa chọn cực kỳ phù hợp.</p>
+
+
+</article>
+
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.c8c8d8c035e1ac96d86ad3ba8c62af627af4c8a1b48394992a61cc0e5584db23.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

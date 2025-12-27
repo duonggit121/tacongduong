@@ -1,0 +1,60 @@
+theme = "hugo-theme-stack"
+baseURL = "https://tacongduong.github.io/"
+languageCode = "vi"
+title = "Tạ Công Dương"
+
+# ================= MENU =================
+[menu]
+
+  [[menu.main]]
+    name = "Trang chủ"
+    url = "/"
+    weight = 1
+
+  [[menu.main]]
+    name = "Giới thiệu"
+    url = "/about/"
+    weight = 2
+
+  [[menu.main]]
+    name = "Blog"
+    url = "/blog/"
+    weight = 3
+
+  [[menu.main]]
+    name = "Thành tựu"
+    url = "/achievements/"
+    weight = 4
+
+
+# ================= PARAMS =================
+[params]
+  # Không hiển thị danh sách bài viết ở trang chủ
+  mainSections = []
+
+
+# ================= SIDEBAR =================
+[params.sidebar]
+  emoji = "👨‍💻"
+  subtitle = "cùng phát triển đam mê"
+  compact = false
+
+
+# ================= AVATAR (SIDEBAR) =================
+[params.avatar]
+  enabled = true
+  local = true
+  src = "img/avatar.jpg"
+
+
+# ================= SOCIAL =================
+[params.social]
+  github = "https://github.com/yourname"
+  facebook = "https://facebook.com/yourname"
+
+
+# ================= MARKDOWN (CỰC KỲ QUAN TRỌNG) =================
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

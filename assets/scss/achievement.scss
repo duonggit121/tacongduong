@@ -1,0 +1,71 @@
+.achievement-page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+/* HERO */
+.achievement-hero {
+  text-align: center;
+  margin-bottom: 3rem;
+
+  h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+  }
+
+  p {
+    color: var(--card-text-color-secondary);
+    margin-top: .5rem;
+  }
+}
+
+/* LIST */
+.achievement-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+}
+
+/* ITEM */
+.achievement-item {
+  background: var(--card-background);
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: var(--shadow-l1);
+  text-align: center;
+
+  h2 {
+    font-size: 1.2rem;
+    margin-bottom: .75rem;
+  }
+
+  /* ẢNH NHỎ + CÂN */
+  img {
+    width: 100%;
+    max-width: 220px;   /* 👈 chỉnh kích thước ảnh */
+    height: auto;
+    margin: 0 auto 1rem;
+    display: block;
+    border-radius: 12px;
+  }
+
+  .achievement-caption {
+    font-size: .9rem;
+    font-style: italic;
+    color: var(--card-text-color-secondary);
+    margin-bottom: .5rem;
+  }
+
+  p {
+    font-size: .95rem;
+    line-height: 1.6;
+  }
+}
+
+/* MOBILE TỐI ƯU */
+@media (max-width: 640px) {
+  .achievement-item img {
+    max-width: 180px;
+  }
+}

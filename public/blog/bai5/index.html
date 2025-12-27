@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="vi" dir="ltr">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="Giới thiệu\rTrong lập trình, rất nhiều khi bạn cần:\n✔ kiểm tra điều kiện\n✔ phân nhánh xử lý\n✔ chạy đoạn code khác nhau tuỳ tình huống\nKhi đó, bạn sẽ dùng if — else — switch.\nBài này sẽ giúp bạn hiểu và dùng được câu điều kiện trong Java một cách đơn giản nhất.\nif — else là gì?\rif dùng để kiểm tra điều kiện.\nNếu điều kiện đúng → chạy đoạn code bên trong.\n">
+<title>Câu điều kiện if–else &amp; switch trong Java — Hiểu là dùng được ngay</title>
+
+<link rel='canonical' href='http://localhost:1313/blog/bai5/'>
+
+<link rel="stylesheet" href="/scss/style.min.143b637336bf0beb4d17a917245b9e67e921e8f4345a3bc837cf21cf7f08a12d.css"><meta property='og:title' content="Câu điều kiện if–else & switch trong Java — Hiểu là dùng được ngay">
+<meta property='og:description' content="Giới thiệu\rTrong lập trình, rất nhiều khi bạn cần:\n✔ kiểm tra điều kiện\n✔ phân nhánh xử lý\n✔ chạy đoạn code khác nhau tuỳ tình huống\nKhi đó, bạn sẽ dùng if — else — switch.\nBài này sẽ giúp bạn hiểu và dùng được câu điều kiện trong Java một cách đơn giản nhất.\nif — else là gì?\rif dùng để kiểm tra điều kiện.\nNếu điều kiện đúng → chạy đoạn code bên trong.\n">
+<meta property='og:url' content='http://localhost:1313/blog/bai5/'>
+<meta property='og:site_name' content='Tạ Công Dương'>
+<meta property='og:type' content='article'><meta property='article:section' content='Blog' /><meta property='article:published_time' content='2025-01-05T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-01-05T00:00:00&#43;00:00'/>
+<meta name="twitter:title" content="Câu điều kiện if–else & switch trong Java — Hiểu là dùng được ngay">
+<meta name="twitter:description" content="Giới thiệu\rTrong lập trình, rất nhiều khi bạn cần:\n✔ kiểm tra điều kiện\n✔ phân nhánh xử lý\n✔ chạy đoạn code khác nhau tuỳ tình huống\nKhi đó, bạn sẽ dùng if — else — switch.\nBài này sẽ giúp bạn hiểu và dùng được câu điều kiện trong Java một cách đơn giản nhất.\nif — else là gì?\rif dùng để kiểm tra điều kiện.\nNếu điều kiện đúng → chạy đoạn code bên trong.\n">
+  
+   
+  <link rel="stylesheet" href="/scss/blog.min.99523269ebf82a72543dc2451aa5dc1ebf10bc5cd9846e01e1b0243e70543dfc.css">
+
+    </head>
+    <body class="">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column compact"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Hiển thị Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu_b5976aa1afdc1d2e.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">👨‍💻</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Tạ Công Dương</a></h1>
+            <h2 class="site-description">cùng phát triển đam mê</h2>
+        </div>
+    </header><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                <span>Trang chủ</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/about/' >
+                
+                
+                
+                <span>Giới thiệu</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/blog/' >
+                
+                
+                
+                <span>Blog</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/achievements/' >
+                
+                
+                
+                <span>Thành tựu</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>Chế độ nền tối</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+            <main class="main full-width">
+
+<article class="article-content">
+
+  
+  <h1 class="article-title">
+    Câu điều kiện if–else &amp; switch trong Java — Hiểu là dùng được ngay
+  </h1>
+
+  
+  
+    <p class="article-date">
+      05/01/2025
+    </p>
+  
+
+  
+  <h2 id="giới-thiệu">Giới thiệu
+</h2><p>Trong lập trình, rất nhiều khi bạn cần:</p>
+<p>✔ kiểm tra điều kiện<br>
+✔ phân nhánh xử lý<br>
+✔ chạy đoạn code khác nhau tuỳ tình huống</p>
+<p>Khi đó, bạn sẽ dùng <strong>if — else — switch</strong>.</p>
+<p>Bài này sẽ giúp bạn hiểu và dùng được <strong>câu điều kiện trong Java</strong> một cách đơn giản nhất.</p>
+<hr>
+<h2 id="if--else-là-gì">if — else là gì?
+</h2><p><code>if</code> dùng để <strong>kiểm tra điều kiện</strong>.<br>
+Nếu điều kiện đúng → chạy đoạn code bên trong.</p>
+<p>Ví dụ:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> age <span style="color:#f92672">=</span> 18;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> (age <span style="color:#f92672">&gt;=</span> 18) {
+</span></span><span style="display:flex;"><span>    System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Bạn đã đủ 18 tuổi&#34;</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Nếu điều kiện sai → Java bỏ qua.</p>
+<h2 id="if--else">if — else
+</h2><p>Khi bạn muốn xử lý thêm trường hợp ngược lại, dùng else</p>
+<pre tabindex="0"><code>int age = 16;
+
+if (age &gt;= 18) {
+    System.out.println(&#34;Đủ tuổi&#34;);
+} else {
+    System.out.println(&#34;Chưa đủ tuổi&#34;);
+}
+</code></pre><p>🟢 Output:
+Chưa đủ tuổi</p>
+<h2 id="if--else-if--else">if — else if — else
+</h2><pre tabindex="0"><code>Dùng khi có nhiều điều kiện.
+int score = 85;
+
+if (score &gt;= 90) {
+    System.out.println(&#34;Xuất sắc&#34;);
+} else if (score &gt;= 75) {
+    System.out.println(&#34;Khá&#34;);
+} else if (score &gt;= 50) {
+    System.out.println(&#34;Trung bình&#34;);
+} else {
+    System.out.println(&#34;Yếu&#34;);
+}
+</code></pre><p>👉 Java sẽ kiểm tra từ trên xuống.
+Gặp điều kiện đúng → dừng lạ</p>
+<h2 id="lưu-ý-quan-trọng">Lưu ý quan trọng
+</h2><p>✔ Điều kiện trong if phải là boolean</p>
+<p>✔ Dùng == để so sánh — đừng nhầm với =</p>
+<p>Ví dụ đúng:</p>
+<pre tabindex="0"><code>if (a == 5) { }
+</code></pre><p>Ví dụ sai:</p>
+<pre tabindex="0"><code>if (a = 5) { }   // lỗi!
+</code></pre><h2 id="toán-tử-logic-đi-kèm-if">Toán tử logic đi kèm if
+</h2><p>Toán tử	Ý nghĩa
+&amp;&amp;	Và (cả 2 đều đúng)</p>
+<p>! Phủ định</p>
+<pre tabindex="0"><code>int age = 20;
+boolean isStudent = true;
+
+if (age &lt; 25 &amp;&amp; isStudent) {
+    System.out.println(&#34;Giảm giá sinh viên&#34;);
+}
+</code></pre><h2 id="switch--khi-có-nhiều-lựa-chọn-cố-định">switch — khi có nhiều lựa chọn cố định
+</h2><p>switch phù hợp khi bạn có các giá trị cụ thể như số, ký tự, chuỗi.</p>
+<p>Ví dụ:</p>
+<pre tabindex="0"><code>int day = 3;
+
+switch (day) {
+    case 1:
+        System.out.println(&#34;Thứ hai&#34;);
+        break;
+    case 2:
+        System.out.println(&#34;Thứ ba&#34;);
+        break;
+    case 3:
+        System.out.println(&#34;Thứ tư&#34;);
+        break;
+    default:
+        System.out.println(&#34;Ngày không hợp lệ&#34;);
+}
+</code></pre><p>🟢 Output:</p>
+<pre tabindex="0"><code>Thứ tư
+</code></pre><h2 id="vì-sao-cần-break">Vì sao cần break?
+</h2><p>✔ break giúp thoát khỏi switch
+Nếu quên break, chương trình sẽ chạy tiếp các case phía dưới.</p>
+<h2 id="switch-với-string">switch với String
+</h2><p>Java cho phép dùng String trong switch:</p>
+<pre tabindex="0"><code>String role = &#34;admin&#34;;
+
+switch (role) {
+    case &#34;admin&#34;:
+        System.out.println(&#34;Quản trị viên&#34;);
+        break;
+    case &#34;user&#34;:
+        System.out.println(&#34;Người dùng&#34;);
+        break;
+    default:
+        System.out.println(&#34;Không xác định&#34;);
+}
+</code></pre><h2 id="khi-nào-dùng-if--khi-nào-dùng-switch">Khi nào dùng if — khi nào dùng switch?
+</h2><table>
+  <thead>
+      <tr>
+          <th>Trường hợp</th>
+          <th>Nên dùng</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Điều kiện phức tạp, nhiều phép so sánh</td>
+          <td>if — else</td>
+      </tr>
+      <tr>
+          <td>So sánh giá trị cố định (1, 2, 3… “A”, “B”)</td>
+          <td>switch</td>
+      </tr>
+      <tr>
+          <td>Có phạm vi giá trị (&gt;=, &lt;=, &lt;, &gt;)</td>
+          <td>if — else</td>
+      </tr>
+  </tbody>
+</table>
+<p>Ví dụ thực tế tổng hợp</p>
+<pre tabindex="0"><code>int age = 22;
+boolean hasTicket = true;
+
+if (age &gt;= 18 &amp;&amp; hasTicket) {
+    System.out.println(&#34;Bạn được vào cửa&#34;);
+} else {
+    System.out.println(&#34;Không đủ điều kiện&#34;);
+}
+</code></pre><p>Những lỗi người mới thường gặp
+❌ Quên dấu { }</p>
+<p>❌ Nhầm = với ==</p>
+<p>❌ Quên break trong switch</p>
+<p>❌ Điều kiện không phải boolean</p>
+<h2 id="kết-luận">Kết luận
+</h2><p>Qua bài này, bạn đã hiểu:</p>
+<p>✔ Câu lệnh if — else</p>
+<p>✔ else if cho nhiều điều kiện</p>
+<p>✔ switch và break</p>
+<p>✔ Khi nào dùng if, khi nào dùng switch</p>
+
+
+</article>
+
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.c8c8d8c035e1ac96d86ad3ba8c62af627af4c8a1b48394992a61cc0e5584db23.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>
